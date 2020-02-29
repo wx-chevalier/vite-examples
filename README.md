@@ -1,6 +1,6 @@
 ![](https://i.postimg.cc/0N7w0mnN/image.png)
 
-# m-fe
+# m-fe/libs
 
 在 [Web 开发导论/微前端与大前端](http://ngte-web.gitbook.io)一文中，笔者简述了微服务与微前端的设计理念以及微前端的潜在可行方案。微服务与微前端，都是希望将某个单一的单体应用，转化为多个可以独立运行、独立开发、独立部署、独立维护的服务或者应用的聚合，从而满足业务快速变化及分布式多团队并行开发的需求。如康威定律(Conway’s Law)所言，设计系统的组织，其产生的设计和架构等价于组织间的沟通结构；微服务与微前端不仅仅是技术架构的变化，还包含了组织方式、沟通方式的变化。微服务与微前端原理和软件工程，面向对象设计中的原理同样相通，都是遵循单一职责(Single Responsibility)、关注分离(Separation of Concerns)、模块化(Modularity)与分而治之(Divide & Conquer)等基本的原则。
 
@@ -73,120 +73,7 @@ m-fe-rtw 内置了 Gitlab CI 的完整流程，请参考 .gitlab-ci.yml 及 scri
 
 - [Legoble](https://github.com/FE-Kits/Legoble): Build your apps like stacking Lego blocks 💫 总想自己实现一款可视化配置的动态应用构建工具，动态表单、动态布局、动态报告、动态规则、动态选择、动态流程
 
-# 项目开发
-
-笔者一直推崇[渐进式的工程架构](https://parg.co/rAn)，因此该模板对于复杂度要求较低的项目而言，可以直接从基础模式启动，与其他 TS 项目并无太大区别。
-
-## Structure | 项目结构
-
-完整的微前端应用，可能会包含以下组成部分：
-
-- Module | 模块: 模块是可单独编译、发布的基础单元，基础模式下可直接打包入主应用，标准模式下多项目共用时可单独打包为 AMD/UMD 格式，通过 SystemJS 引入
-- Page | 页面: 页面不可单独编译，使用 Webpack SplitChunk 或其他机制进行异步加载
-- App | 应用: 应用是对模块的扩展，是实际用户可见的部分
-- Widget | 控件: 控件是特殊的模块，譬如通用的无业务组件等
-- Extension | 扩展: 扩展是特殊的应用，提供了跨模块的通用功能，类似于 Chrome Extension 的定位
-
-基于此，我们可以将某个微前端应用抽象为如下不同的模块组：
-
-基础模块：
-
-- rtw: 根目录，public 目录下包含了部分跨模块集成测试的代码
-
-核心模块：
-
-- rtw-core/rtw-sdk/rtw-shared: 暴露给子应用可用的通用基础类、模型定义、部分无界面独立模块等。rtw-core 建议不放置界面相关，使用 Jest UT 方式进行功能验证。
-- rtw-bootstrap: 完整项目级别编译与启动入口，包含项目的运行时配置、依赖配置\消息总线、注册中心、核心模块加载机制等。
-- rtw-host-app: 提供界面基础容器，譬如应用标准的 Layout，Menu 等组件；提供 Redux 核心 Store。
-
-子业务应用：
-
-- rtw-mobx-app: MobX 示例应用
-- rtw-redux-app: Redux 示例应用
-
-扩展模块：
-
-- rtw-widgets: 包含部分业务型控件，提供给所有的子应用使用，提取通用业务逻辑、对上屏蔽部分第三方依赖关系，类似于完整的 OSS 文件上传控件等。
-- rtw-extensions: 包含部分业务无关的通用型插件，类似于 Chrome Extension 的定位。
-- rtw-worker: 包含通用的 Web Worker & WASM 计算模块，子应用内也可以通过 Buffer 方式直接引入自定义的 Worker
-
-如果希望在子应用 A 中加载子应用 B 的实例，则应该使用类似于依赖注入的方式，从统一的注册中心中获取该实例对象。所有各个模块共享的基础库，都必须以 UMD 模式加载到全局；rtw-host-app 中声明与使用需要展示哪些模块，rtw-bootstrap 中注册可提供的 UMD 子模块。
-
-项目使用 Webpack 作为项目的配置打包工具，同样遵循透明原则；所有的子模块中的 Webpack 配置文件是引用并根据自身需求修改之后的根目录下的 scripts 中的配置文件。值得一提的是，根据 Node 的模块索引规则，scripts 目录下的配置文件会引用根目录下的 node_modules 文件，因此同样需要在根目录下安装 Webpack 及相关的依赖。
-
-## 基础模式
-
-基础模式类似于(伪)多模块单页面，仅有唯一的 Host APP 作为编译与运行的入口，其他包体（譬如 rtw-core）直接打包进主包体中，不使用 SystemJS 进行独立加载。
-
-### `rtw-core`
-
-rtw-core 及相似的库承载了公共的结构定义、工具类等，在该包体目录下运行 `npm run build` 命令即可以生成 ES/CJS/UMD 等多种类型文件，以及 types 类型定义；可以直接通过 npm publish 来发布到公共/私有的 NPM 仓库中。
-
-其他包体通过 NPM 安装 rtw-core 并使用，如果以标准模式运行，则需要首先加载该库到全局作用域，利用 RequireJS/SystemJS 等工具遵循 AMD 规范来注入到其他依赖的库/应用中。
-
-值得一提的是，对于子应用中，如果存在需要共享组件/类型的情景。对于类型信息，建议是将子应用同样编译打包发布到 NPM 仓库中，纯组件可以直接引入，对于业务组件建议通过全局的注册中心来获取。
-
-### `rtw-host-app`
-
-在 rtw-host-app 包下，执行 `npm run dev:sa` 命令，会从 `src/index.sa` 文件启动应用；如上文所述，该模式仅会基于 Webpack Splitted Chunk 进行异步加载，其开发流程与标准的单模块应用并无区别。
-
-## 标准模式
-
-### `rtw-bootstrap & rtw-host-app`
-
-rtw-bootstrap 是微前端应用的实际启动点，其核心功能是执行依赖与子应用的注册。在启动时，其会根据传入的 `__HOST_APP__` 与 `__DEV_APP__` 等变量信息完成应用的顺序加载与启动。在标准模式下，rtw-host-app 的入口是 `src/index` 文件，该模式下，index 文件会对外暴露 render 函数，该函数会由 rtw-bootstrap 注入 importApp 函数来执行子应用加载：
-
-```ts
-export function render(_importApp: Function) {
-
-  importApp = _importApp;
-
-  ReactDOM.render(
-    ...
-  );
-}
-```
-
-换言之，rtw-bootstrap 提供了应用加载的能力，而 rtw-host-app 决定了应该加载哪些应用；在实际案例中，我们应该将用户权限控制、菜单与子应用信息获取等业务操作放置在 rtw-host-app 中。
-
-### `rtw-redux-app & rtw-mobx-app`
-
-这里以 rtw-mobx-app 为例介绍如何进行子应用开发，如果是项目已经发布上线，那么我们可以通过 Resource Overrides 等在线资源请求转发的工具将线上资源请求转发到本地服务器。在进行本地开发时，因为子应用本身并不会包含 `ReactDOM.render` 或者类似的将 Virtual DOM 渲染到界面的函数，因此在运行 `npm run dev` 之后，本地会开启生成 UMD 文件的 Webpack Dev Server。参考子应用的 `public/index.html` 文件：
-
-```html
-<script src="./bootstrap/static.js" type="text/javascript"></script>
-<script src="./bootstrap/runtime.js" type="text/javascript"></script>
-<script src="./bootstrap/vendors.js" type="text/javascript"></script>
-
-<script>
-  // 联调环境
-  //   window.__HOST_APP__ = {
-  //     id: 'host',
-  //     name: 'HOST APP',
-  //     module: 'http://0.0.0.0:8081/index.js',
-  //     css: 'http://0.0.0.0:8081/index.css'
-  //   };
-
-  // 正式开发环境
-  window.__HOST_APP__ = {
-    title: 'HOST APP',
-    module: '/release/rtw-host-app/index.js',
-    css: '/release/rtw-host-app/index.css',
-  };
-
-  window.__DEV_APP__ = { id: 'dev', name: 'DEV APP', module: '/index.js' };
-</script>
-<script src="./bootstrap/index.js" type="text/javascript"></script>
-```
-
-可以看出子应用的启动需要依赖于 rtw-bootstrap 以及 rtw-host-app，如果项目已经发布上线，那么建议是直接从 CDN 加载资源；否则可以将资源放置到 `public/release` 目录下。如果本地需要同时调试 Host APP，则直接也将 Host APP 以开发方式运行（`npm run dev`），然后直接引入 Webpack Dev Server 生成的资源地址即可。
-
 # About
-
-## Todos
-
-- [x] 使用 ESLint 替换 TSLint
-- [x] 将现有项目中的通用配置抽出到 m-fe-configs 中
 
 ## Copyright & More | 延伸阅读
 
