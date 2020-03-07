@@ -8,6 +8,7 @@
   },
   "author": "wx-chevalier@github",
   "license": "MIT",
+  "private": true,
   "workspaces": [
     "packages/react-lib"
   ],

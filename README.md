@@ -2,7 +2,7 @@
 
 # m-fe/libs
 
-在 [Web 开发导论/微前端与大前端](http://ngte-web.gitbook.io)一文中，笔者简述了微服务与微前端的设计理念以及微前端的潜在可行方案。微服务与微前端，都是希望将某个单一的单体应用，转化为多个可以独立运行、独立开发、独立部署、独立维护的服务或者应用的聚合，从而满足业务快速变化及分布式多团队并行开发的需求。如康威定律(Conway’s Law)所言，设计系统的组织，其产生的设计和架构等价于组织间的沟通结构；微服务与微前端不仅仅是技术架构的变化，还包含了组织方式、沟通方式的变化。微服务与微前端原理和软件工程，面向对象设计中的原理同样相通，都是遵循单一职责(Single Responsibility)、关注分离(Separation of Concerns)、模块化(Modularity)与分而治之(Divide & Conquer)等基本的原则。
+在 [Web 开发导论/微前端与大前端](https://github.com/wx-chevalier/Web-Series)一文中，笔者简述了微服务与微前端的设计理念以及微前端的潜在可行方案。微服务与微前端，都是希望将某个单一的单体应用，转化为多个可以独立运行、独立开发、独立部署、独立维护的服务或者应用的聚合，从而满足业务快速变化及分布式多团队并行开发的需求。如康威定律(Conway’s Law)所言，设计系统的组织，其产生的设计和架构等价于组织间的沟通结构；微服务与微前端不仅仅是技术架构的变化，还包含了组织方式、沟通方式的变化。微服务与微前端原理和软件工程，面向对象设计中的原理同样相通，都是遵循单一职责(Single Responsibility)、关注分离(Separation of Concerns)、模块化(Modularity)与分而治之(Divide & Conquer)等基本的原则。
 
 ![微前端项目结构](https://user-images.githubusercontent.com/5803001/44003230-de68ac5c-9e81-11e8-81f5-8092f7a9b421.png)
 
@@ -55,13 +55,19 @@ m-fe-rtw 内置了 Gitlab CI 的完整流程，请参考 .gitlab-ci.yml 及 scri
 
 ## Nav | 关联项目
 
-- [m-fe-configs](https://github.com/FE-Kits/m-fe-configs)：Common Dev Configs(ESLint, Prettier, Husky, etc.) for Micro-Frontend Apps
+- [m-fe-configs](https://github.com/wx-chevalier/m-fe-configs)：Common Dev Configs(ESLint, Prettier, Husky, etc.) for Micro-Frontend Apps
 
-- [m-fe-rtw](https://github.com/FE-Kits/m-fe-rtw): Micro-Frontend boilerplate with React & TypeScript & Webpack, for complicated cooperative applications. | 微前端项目模板
+- [m-fe-rtw](https://github.com/wx-chevalier/m-fe-rtw): Micro-Frontend boilerplate with React & TypeScript & Webpack, for complicated cooperative applications. | 微前端项目模板
 
-- [m-fe-vtw](https://github.com/FE-Kits/m-fe-vtw): Micro-Frontend boilerplate with Vue & TypeScript & Webpack, for complicated cooperative applications. | 微前端项目模板
+- [m-fe-vtw](https://github.com/wx-chevalier/m-fe-vtw): Micro-Frontend boilerplate with Vue & TypeScript & Webpack, for complicated cooperative applications. | 微前端项目模板
 
-- [m-fe-libs](https://github.com/FE-Kits/m-fe-libs)：Common Libs for Micro-Frontend Apps.
+- [m-fe-rm](https://github.com/FE-Kits/m-fe-rm): 基于 React & TS & Webpack & APICloud 提供快速移动端应用开发的能力
+
+- [m-fe-taro](https://github.com/wx-chevalier/m-fe-taro): 基于 Taro & TS 的多端小程序开发模板。
+
+- [m-fe-scaffold](https://github.com/FE-Kits/m-fe-scaffold/): Cli Toolkits for Web Development & Deploy on Kubernetes，微前端实践中沉淀的一系列脚手架工具。
+
+- [m-fe-libs](https://github.com/FE-Kits/m-fe-libs): Micro-Frontend boilerplate with React & TypeScript & Webpack, for complicated cooperative applications. | 微前端项目模板
 
 --
 
