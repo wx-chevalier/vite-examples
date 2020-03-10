@@ -15,7 +15,7 @@
 $ git clone https://github.com/FE-Kits/m-fe-rtw
 
 # 添加全局的依赖更新工具
-$ yarn global add npm-check-updates
+$ yarn global add npm-check-updates npm-run-all cross-env copyfiles
 
 # 为各个子项目安装依赖，以及链接各个子项目
 $ yarn bootstrap && yarn build
