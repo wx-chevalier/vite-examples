@@ -1,0 +1,27 @@
+@import '~@/skeleton/styles/variables.less';
+
+.container {
+  .appContainer;
+
+  .flexVerticalCenter;
+
+  position: relative;
+}
+
+.header {
+  .flexCenter;
+
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 48px;
+
+  :global(.ant-divider-vertical) {
+    margin: 0 24px;
+    height: 24px;
+  }
+}
+
+.mapContainerWrapper {
+  width: 1000px;
+  height: 500px;
+}

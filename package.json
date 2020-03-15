@@ -10,7 +10,7 @@
   "license": "MIT",
   "private": true,
   "workspaces": [
-    "packages/react-lib"
+    "packages/*"
   ],
   "keywords": [
     "react",
@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "@svgr/webpack": "^5.1.0",
-    "@wx-fc/app-config": "^0.3.1"
+    "@wx-fc/app-config": "^0.3.9"
   },
   "browserslist": [
     "extends @wx-fc/browserslist-config/modern"
