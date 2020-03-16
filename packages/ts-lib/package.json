@@ -19,11 +19,12 @@
     "react"
   ],
   "scripts": {
-    "build": "npm run build:es && npm run build:cjs && npm run build:umd",
+    "build": "npm run build:es && npm run build:cjs && npm run build:umd && npm run clean:r",
     "build:cjs": "tsc --project ./tsconfig.cjs.json",
     "build:es": "tsc --project ./tsconfig.es.json",
     "build:umd": "cross-env NODE_ENV=production webpack -p --config ./scripts/webpack/webpack.config.umd.js",
     "clean": "rimraf dist",
+    "clean:r": "rimraf ./dist/*.map && rimraf ./dist/**/*.map && rimraf ./dist/**/*.tsbuildinfo",
     "dev": "tsc -w --project ./tsconfig.cjs.json",
     "lint": "run-p lint:*",
     "lint:es": "cross-env PARSER_NO_WATCH=true eslint . --cache --ext js,md,ts,tsx -f friendly --max-warnings 10",
