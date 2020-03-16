@@ -1,4 +1,4 @@
-FROM registry.unionfab.com/ufc/ufc-fe-builder:latest as builder
+FROM registry.mybiz.com/ufc/ufc-fe-builder:latest as builder
 
 RUN apk upgrade --update-cache --available \\
   && apk add --upgrade autoconf automake build-base libtool nasm pkgconfig zlib-dev libpng-dev

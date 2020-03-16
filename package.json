@@ -21,14 +21,15 @@
   ],
   "scripts": {
     "bootstrap": "yarn install && yarn run build",
-    "build": "npm run clean && yarn workspaces run build",
-    "clean": "yarn workspaces run clean",
+    "build": "npm run clean && yarn workspaces run build && cp -r ./packages/app-lib/build/ ./build",
+    "clean": "rm -rf ./build && yarn workspaces run clean",
     "clean:cov": "yarn workspaces run clean:cov",
     "dev": "npm start",
     "lint": "./scripts/tools/lint_all.sh",
     "lint-staged": "lint-staged",
     "postinstall": "node ./node_modules/husky/lib/installer/bin install",
     "prettier-all": "prettier --write 'packages/**/src/**/*.{ts,tsx}' '!src/{assets,datas}/**'",
+    "start": "(cd packages/app-lib && npm start)",
     "test": "yarn workspaces run test",
     "test:cov": "yarn workspaces run test:cov",
     "test:watch": "yarn workspaces run test:watch",
@@ -36,10 +37,10 @@
   },
   "devDependencies": {
     "@svgr/webpack": "^5.1.0",
-    "@wx-fc/app-config": "^0.3.9"
+    "@wx-fc/app-config": "^0.4.0"
   },
   "browserslist": [
-    "extends @wx-fc/browserslist-config/modern"
+    "extends @wx-fc/browserslist-config"
   ],
   "commitlint": {
     "extends": [

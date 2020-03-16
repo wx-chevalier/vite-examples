@@ -3437,10 +3437,10 @@
     "@webassemblyjs/wast-parser" "1.8.5"
     "@xtuc/long" "4.2.2"
 
-"@wx-fc/app-config@^0.3.9":
-  version "0.3.9"
-  resolved "https://registry.yarnpkg.com/@wx-fc/app-config/-/app-config-0.3.9.tgz#f458a4b17ab2eb7cb206872bf57e572c3ed6c208"
-  integrity sha512-/LcTIUmgzZKm7cxXZo6LbgmwsI7CYnn8gwiu4f6LkbYYQZvy+9thpIwx8ERSrsl61uG2v7Z6QM79xi/7CjxtLg==
+"@wx-fc/app-config@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.npm.taobao.org/@wx-fc/app-config/download/@wx-fc/app-config-0.4.0.tgz#25ca6e7639d6ab9e069fe3e6bde19ba294598c94"
+  integrity sha1-JcpudjnWq54Gn+PmveGbopRZjJQ=
   dependencies:
     "@svgr/webpack" "^5.2.0"
     "@types/classnames" "^2.2.10"
@@ -3453,7 +3453,7 @@
     "@types/redux-actions" "^2.6.1"
     "@types/redux-pack" "^0.1.4"
     "@types/smoothscroll-polyfill" "^0.3.1"
-    "@wx-fc/babel-preset" "^0.0.2"
+    "@wx-fc/babel-preset" "^0.0.3"
     "@wx-fc/browserslist-config" "^0.0.1"
     "@wx-fc/commitlint-config" "^0.0.1"
     "@wx-fc/eslint-config" "^0.0.8"
@@ -3477,10 +3477,10 @@
     typescript "^3.8.3"
     webpack "^4.42.0"
 
-"@wx-fc/babel-preset@^0.0.2":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@wx-fc/babel-preset/-/babel-preset-0.0.2.tgz#9807548fb3dc99475b05fe9998ce54ba30acd6b9"
-  integrity sha512-+kibrKYdqZjMCAcb24ORge0dLzBPKrGDT5+tCNYgBK8a2NVdXIwuuP1ZF3dlOCBiQpO5rCF7WZV7/JI43FzcIg==
+"@wx-fc/babel-preset@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.npm.taobao.org/@wx-fc/babel-preset/download/@wx-fc/babel-preset-0.0.3.tgz#eec829e28b0a00d2a2555dde95dcd85332a960c2"
+  integrity sha1-7sgp4osKANKiVV3eldzYUzKpYMI=
   dependencies:
     "@babel/helper-plugin-utils" "^7.8.3"
     "@babel/plugin-proposal-class-properties" "^7.8.3"

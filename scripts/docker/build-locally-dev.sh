@@ -10,7 +10,7 @@ set -e
 
 cd $(dirname $0)/../..
 
-DOCKER_REGISTRY_SERVER=${DOCKER_REGISTRY_SERVER:=registry.unionfab.com}
+DOCKER_REGISTRY_SERVER=${DOCKER_REGISTRY_SERVER:=registry.mybiz.com}
 IMAGE=${DOCKER_REGISTRY_SERVER}/m-fe-web-client
 TAG=${TAG:=latest}
 

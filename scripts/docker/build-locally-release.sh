@@ -12,7 +12,7 @@ cd $(dirname $0)/../..
 
 PACKAGE_VERSION=$(cat package.json | grep version | head -1 | awk -F= "{ print $2 }" | sed 's/[version:,\",]//g' | tr -d '[[:space:]]')
 
-DOCKER_REGISTRY_SERVER=${DOCKER_REGISTRY_SERVER:=registry.unionfab.com}
+DOCKER_REGISTRY_SERVER=${DOCKER_REGISTRY_SERVER:=registry.mybiz.com}
 IMAGE=${DOCKER_REGISTRY_SERVER}/m-fe-web-client
 TAG=v${PACKAGE_VERSION:=latest}-rc
 
