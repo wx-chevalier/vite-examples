@@ -1,11 +1,11 @@
 /** 用户列表 */
 import { Table } from 'antd';
-import { ColumnProps, TableProps } from 'antd/es/table';
+import { ColumnType, TableProps } from 'antd/es/table';
 import dayjs from 'dayjs';
 import React from 'react';
 import * as S from 'ufc-schema';
 
-export type PersonTableColumns = Array<ColumnProps<S.Person>>;
+export type PersonTableColumns = Array<ColumnType<S.Person>>;
 
 const defaultColumns: PersonTableColumns = [
   {

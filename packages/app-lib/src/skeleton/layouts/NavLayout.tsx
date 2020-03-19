@@ -1,8 +1,8 @@
+import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
 import ProLayout, {
   BasicLayoutProps as ProLayoutProps,
   MenuDataItem,
 } from '@ant-design/pro-layout';
-import { Icon } from 'antd';
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -35,9 +35,8 @@ const menuDataRender = (menuList: MenuDataItem[]): MenuDataItem[] =>
     return checkPermissions(item.authority, localItem, null) as MenuDataItem;
   });
 
-const defaultRenderCollapsedButton = (collapsed?: boolean) => (
-  <Icon type={collapsed ? 'menu-unfold' : 'menu-fold'} />
-);
+const defaultRenderCollapsedButton = (collapsed?: boolean) =>
+  collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />;
 
 const footerRender: NavLayoutProps['footerRender'] = () => {
   return (

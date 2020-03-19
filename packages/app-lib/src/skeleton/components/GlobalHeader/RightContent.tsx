@@ -1,4 +1,5 @@
-import { Icon, Tooltip } from 'antd';
+import { QuestionCircleOutlined } from '@ant-design/icons';
+import { Tooltip } from 'antd';
 import * as React from 'react';
 
 import { getGlobalUser } from '@/apis';
@@ -62,7 +63,7 @@ export const RightContent: React.SFC<RightContentProps> = props => {
           rel="noopener noreferrer"
           className={styles.action}
         >
-          <Icon type="question-circle-o" />
+          <QuestionCircleOutlined />
         </a>
       </Tooltip>
       <NoticeIconView />

@@ -1,4 +1,5 @@
-import { Avatar, Icon, Menu, Spin } from 'antd';
+import { LogoutOutlined } from '@ant-design/icons';
+import { Avatar, Menu, Spin } from 'antd';
 import { ClickParam } from 'antd/es/menu';
 import * as React from 'react';
 import { FormattedMessage } from 'react-intl';
@@ -34,7 +35,7 @@ export class UserDropdown extends React.Component<GlobalHeaderRightProps> {
         onClick={this.onMenuClick}
       >
         <Menu.Item key="logout">
-          <Icon type="logout" />
+          <LogoutOutlined />
           <FormattedMessage id="menu.account.logout" defaultMessage="logout" />
         </Menu.Item>
       </Menu>

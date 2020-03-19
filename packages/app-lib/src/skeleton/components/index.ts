@@ -9,5 +9,4 @@ export * from './LangSelector';
 export * from './NoticeIcon';
 export * from './PageLoading';
 export * from './Label';
-export * from './IntervalCharts';
 export * from './PageHeader';
