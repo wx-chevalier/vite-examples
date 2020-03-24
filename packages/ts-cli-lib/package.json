@@ -1,16 +1,19 @@
 {
-  "name": "@m-fe/ts-lib",
+  "name": "@m-fe/ts-cli-lib",
   "version": "0.0.1",
-  "description": "@m-fe/ts-lib",
+  "description": "@m-fe/ts-cli-lib",
   "repository": {
     "type": "git",
-    "url": "https://github.com/FE-Kits/fe-boilerplates"
+    "url": "https://github.com/FE-Kits/m-fe-libs"
   },
   "author": "wx-chevalier@github",
   "license": "MIT",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
   "types": "dist/types/index.d.ts",
+  "bin": {
+    "myCli": "dist/cli/index.js"
+  },
   "files": [
     "dist/"
   ],
@@ -34,8 +37,14 @@
     "test:cov": "npm run cleanCov && npm test -- --coverage",
     "test:watch": "npm test -- --watch"
   },
-  "dependencies": {},
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "inquirer": "^7.1.0",
+    "node-emoji": "^1.10.0",
+    "yargs": "^15.3.1"
+  },
   "devDependencies": {
+    "@types/inquirer": "^6.5.0",
     "@m-fe/app-config": "^0.4.2",
     "cross-env": "^6.0.3",
     "webpack": "^4.41.2"
