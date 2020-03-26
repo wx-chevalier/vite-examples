@@ -6,7 +6,6 @@ import dayjs from 'dayjs';
 import timeZone from 'dayjs-ext/plugin/timeZone';
 import zh from 'dayjs/locale/zh-cn';
 import advancedFormat from 'dayjs/plugin/advancedFormat';
-import badMutable from 'dayjs/plugin/badMutable';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
 import isMoment from 'dayjs/plugin/isMoment';
 import isSameOrAfter from 'dayjs/plugin/isSameOrAfter';
@@ -33,7 +32,6 @@ smoothscroll.polyfill();
 
 dayjs.extend(utc);
 dayjs.extend(advancedFormat);
-dayjs.extend(badMutable);
 dayjs.extend(customParseFormat);
 dayjs.extend(isMoment);
 dayjs.extend(isSameOrAfter);
