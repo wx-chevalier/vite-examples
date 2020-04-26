@@ -8,12 +8,12 @@
   },
   "author": "wx-chevalier@github",
   "license": "MIT",
-  "main": "dist/cjs/index.js",
-  "module": "dist/es/index.js",
-  "types": "dist/types/index.d.ts",
   "bin": {
     "myCli": "dist/cli/index.js"
   },
+  "main": "dist/cjs/index.js",
+  "module": "dist/es/index.js",
+  "types": "dist/types/index.d.ts",
   "files": [
     "dist/"
   ],
@@ -45,7 +45,7 @@
   },
   "devDependencies": {
     "@types/inquirer": "^6.5.0",
-    "@m-fe/app-config": "^0.4.2",
+    "@m-fe/app-config": "^0.4.9",
     "cross-env": "^6.0.3",
     "webpack": "^4.41.2"
   },
@@ -57,7 +57,6 @@
       "@m-fe"
     ]
   },
-  "prettier": "@m-fe/prettier-config/semi",
   "remarkConfig": {
     "plugins": [
       "@m-fe/remark-config"

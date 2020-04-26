@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "@svgr/webpack": "^5.1.0",
-    "@m-fe/app-config": "^0.4.2"
+    "@m-fe/app-config": "^0.4.9"
   },
   "browserslist": [
     "extends @m-fe/browserslist-config"
@@ -47,7 +47,6 @@
       "@m-fe"
     ]
   },
-  "prettier": "@m-fe/prettier-config/semi",
   "remarkConfig": {
     "plugins": [
       "@m-fe/remark-config"

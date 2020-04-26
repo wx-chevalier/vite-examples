@@ -71,7 +71,7 @@
   },
   "devDependencies": {
     "@types/jwt-decode": "^2.2.1",
-    "@m-fe/app-config": "^0.4.2",
+    "@m-fe/app-config": "^0.4.9",
     "cross-env": "^7.0.2",
     "eslint": "^6.8.0",
     "npm-run-all": "^4.1.5",
@@ -88,7 +88,6 @@
       "@m-fe"
     ]
   },
-  "prettier": "@m-fe/prettier-config/semi",
   "remarkConfig": {
     "plugins": [
       "@m-fe/remark-config"
