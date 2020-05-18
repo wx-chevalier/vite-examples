@@ -36,8 +36,8 @@
     "upgrade": "./scripts/tools/upgrade_pkgs.sh"
   },
   "devDependencies": {
-    "@svgr/webpack": "^5.1.0",
-    "@m-fe/app-config": "^0.4.9"
+    "@svgr/webpack": "^5.4.0",
+    "@m-fe/app-config": "^0.5.2"
   },
   "browserslist": [
     "extends @m-fe/browserslist-config"

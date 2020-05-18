@@ -38,16 +38,16 @@
     "test:watch": "npm test -- --watch"
   },
   "dependencies": {
-    "chalk": "^3.0.0",
+    "chalk": "^4.0.0",
     "inquirer": "^7.1.0",
     "node-emoji": "^1.10.0",
     "yargs": "^15.3.1"
   },
   "devDependencies": {
     "@types/inquirer": "^6.5.0",
-    "@m-fe/app-config": "^0.4.9",
-    "cross-env": "^6.0.3",
-    "webpack": "^4.41.2"
+    "@m-fe/app-config": "^0.5.2",
+    "cross-env": "^7.0.2",
+    "webpack": "^4.43.0"
   },
   "browserslist": [
     "extends @m-fe/browserslist-config"
