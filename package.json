@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "@svgr/webpack": "^5.4.0",
-    "@m-fe/app-config": "^0.5.2"
+    "@m-fe/app-config": "^0.6.9"
   },
   "browserslist": [
     "extends @m-fe/browserslist-config"
