@@ -1,10 +1,10 @@
 {
-  "name": "@m-fe/stl-viewer",
+  "name": "@m-fe/libs",
   "version": "0.0.1",
   "description": "Micro-Frontend Libs, with React & TS & Webpack",
   "repository": {
     "type": "git",
-    "url": "https://github.com/FE-Kits/m-fe-libs"
+    "url": "https://github.com/wx-chevalier/m-fe-libs"
   },
   "author": "wx-chevalier@github",
   "license": "MIT",

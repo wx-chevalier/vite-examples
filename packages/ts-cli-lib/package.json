@@ -4,7 +4,7 @@
   "description": "@m-fe/ts-cli-lib",
   "repository": {
     "type": "git",
-    "url": "https://github.com/FE-Kits/m-fe-libs"
+    "url": "https://github.com/wx-chevalier/m-fe-libs"
   },
   "author": "wx-chevalier@github",
   "license": "MIT",
@@ -45,7 +45,7 @@
   },
   "devDependencies": {
     "@types/inquirer": "^6.5.0",
-    "@m-fe/app-config": "^0.5.2",
+    "@m-fe/app-config": "^0.6.9",
     "cross-env": "^7.0.2",
     "webpack": "^4.43.0"
   },

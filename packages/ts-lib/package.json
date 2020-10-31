@@ -4,7 +4,7 @@
   "description": "@m-fe/ts-lib",
   "repository": {
     "type": "git",
-    "url": "https://github.com/FE-Kits/fe-boilerplates"
+    "url": "https://github.com/wx-chevalier/fe-boilerplates"
   },
   "author": "wx-chevalier@github",
   "license": "MIT",
@@ -19,7 +19,7 @@
     "react"
   ],
   "scripts": {
-    "build": "npm run build:es && npm run build:cjs && npm run build:umd",
+    "build": "npm run clean && npm run build:es && npm run build:cjs && npm run build:umd",
     "build:cjs": "tsc --project ./tsconfig.cjs.json",
     "build:es": "tsc --project ./tsconfig.es.json",
     "build:umd": "cross-env NODE_ENV=production webpack -p --config ./scripts/webpack/webpack.config.umd.js",
@@ -31,13 +31,14 @@
     "lint:ts": "tslint -p . -t stylish",
     "lint:tsc": "tsc -p tsconfig.json --incremental false --noEmit",
     "prepublish": "npm run clean:r",
+    "pub": "npm publish --registry=https://registry.npmjs.org/ --access public",
     "test": "jest --config ./scripts/jest/jest.config.js",
     "test:cov": "npm run cleanCov && npm test -- --coverage",
     "test:watch": "npm test -- --watch"
   },
   "dependencies": {},
   "devDependencies": {
-    "@m-fe/app-config": "^0.5.2",
+    "@m-fe/app-config": "^0.6.9",
     "cross-env": "^7.0.2",
     "webpack": "^4.43.0"
   },

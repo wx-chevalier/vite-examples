@@ -4,7 +4,7 @@
   "description": "Micro Front-end Libs",
   "repository": {
     "type": "git",
-    "url": "https://github.com/FE-Kits/fe-boilerplates"
+    "url": "https://github.com/wx-chevalier/fe-boilerplates"
   },
   "author": "wx-chevalier@github",
   "license": "MIT",
@@ -38,10 +38,8 @@
     "storybook": "start-storybook -p 6006"
   },
   "dependencies": {
-    "npm-run-all": "^4.1.5",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "three": "^0.116.1"
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^5.3.18",
@@ -49,10 +47,11 @@
     "@storybook/addon-links": "^5.3.18",
     "@storybook/addons": "^5.3.18",
     "@storybook/react": "^5.3.18",
-    "@m-fe/app-config": "^0.5.2",
+    "@m-fe/app-config": "^0.6.9",
     "copyfiles": "^2.2.0",
     "cross-env": "^7.0.2",
     "webpack": "^4.43.0",
+    "npm-run-all": "^4.1.5",
     "webpack-dev-server": "^3.11.0"
   },
   "lint-staged": {
