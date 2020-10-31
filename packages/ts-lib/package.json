@@ -38,7 +38,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@m-fe/app-config": "^0.6.9",
+    "@m-fe/app-config": "^0.7.0",
     "cross-env": "^7.0.2",
     "webpack": "^4.43.0"
   },

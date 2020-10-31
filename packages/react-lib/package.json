@@ -47,7 +47,7 @@
     "@storybook/addon-links": "^5.3.18",
     "@storybook/addons": "^5.3.18",
     "@storybook/react": "^5.3.18",
-    "@m-fe/app-config": "^0.6.9",
+    "@m-fe/app-config": "^0.7.0",
     "copyfiles": "^2.2.0",
     "cross-env": "^7.0.2",
     "webpack": "^4.43.0",
