@@ -1,5 +1,5 @@
 const path = require('path');
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 
 const devConfig = require('../../../../scripts/webpack/webpack.config').devConfig;
 

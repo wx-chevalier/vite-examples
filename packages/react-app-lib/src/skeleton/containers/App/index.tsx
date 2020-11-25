@@ -12,7 +12,7 @@ import { Module, getMenus } from '../../../manifest';
 import { NavLayout } from '../../layouts/NavLayout';
 import AppContainer from '../AppContainer';
 
-export interface IAppProps extends RouteComponentProps {}
+export interface IAppProps {}
 
 export interface IAppState {}
 
@@ -48,7 +48,6 @@ export class App extends React.Component<IAppProps, IAppState> {
   }
 
   render() {
-    const { location } = this.props;
     const rootMenu = getMenus();
 
     if (!rootMenu) {
@@ -80,4 +79,4 @@ export class App extends React.Component<IAppProps, IAppState> {
   }
 }
 
-export default connect(_state => ({}), {})(withRouter(App));
+export default connect(_state => ({}), {})(App);

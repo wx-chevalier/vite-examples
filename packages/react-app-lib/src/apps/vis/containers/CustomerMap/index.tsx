@@ -5,7 +5,7 @@ import { RouteComponentProps, withRouter } from 'react-router';
 
 import { UfoState } from '@/ducks';
 
-import * as styles from './index.less';
+import styles from './index.less';
 
 export interface CustomerLoactionCount {
   date: string;

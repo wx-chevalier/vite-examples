@@ -17,7 +17,7 @@ import { RightContent } from '../components/GlobalHeader/RightContent';
 
 import { NavContext } from './NavContext';
 
-import * as styles from './index.less';
+import styles from './index.less';
 
 export interface NavLayoutProps extends ProLayoutProps {
   matchedPath?: string;
