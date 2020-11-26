@@ -36,9 +36,11 @@
     "upgrade": "./scripts/tools/upgrade_pkgs.sh"
   },
   "devDependencies": {
-    "@m-fe/app-config": "^0.7.1",
+    "@m-fe/app-config": "^0.7.6",
+    "@m-fe/tslint-config": "^0.0.5",
     "@svgr/webpack": "^5.4.0",
-    "prettier": "1.19.1"
+    "prettier": "2.2.0",
+    "tslint": "^6.1.3"
   },
   "browserslist": [
     "extends @m-fe/browserslist-config"

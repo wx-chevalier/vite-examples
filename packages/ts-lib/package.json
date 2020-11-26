@@ -38,8 +38,10 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@m-fe/app-config": "^0.7.1",
+    "@m-fe/app-config": "^0.7.6",
+    "@m-fe/tslint-config": "^0.0.5",
     "cross-env": "^7.0.2",
+    "tslint": "^6.1.3",
     "webpack": "^4.43.0"
   },
   "browserslist": [

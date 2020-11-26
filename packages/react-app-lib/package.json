@@ -67,7 +67,7 @@
     "urijs": "^1.19.2"
   },
   "devDependencies": {
-    "@m-fe/app-config": "^0.7.1",
+    "@m-fe/app-config": "^0.7.6",
     "@types/jwt-decode": "^2.2.1",
     "cross-env": "^7.0.2",
     "eslint": "^7.0.0",

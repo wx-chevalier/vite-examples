@@ -3,7 +3,7 @@ module.exports = {
     [
       '@m-fe',
       {
-        import: true,
+        import: [{ libraryName: 'antd-mobile', style: true }],
         react: true,
         typescript: true,
         targets: {
@@ -12,5 +12,5 @@ module.exports = {
       },
     ],
   ],
-  plugins: [['import', { libraryName: 'antd-mobile', style: true }]],
+  // 自定义 Plugi
 };
