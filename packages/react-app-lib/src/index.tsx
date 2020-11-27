@@ -17,6 +17,7 @@ import weekOfYear from 'dayjs/plugin/weekOfYear';
 import weekYear from 'dayjs/plugin/weekYear';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import { hot } from 'react-hot-loader/root';
 import { IntlProvider } from 'react-intl';
 import { Provider } from 'react-redux';
 import * as smoothscroll from 'smoothscroll-polyfill';
@@ -49,8 +50,37 @@ if (!window.gConfig) {
   window.gConfig = {};
 }
 
+if (__DEV__) {
+  const _warn = console.warn;
+  console.warn = (message: unknown, ...args: unknown[]) => {
+    // skip react warnings on development, they should only come from third party components
+    if (
+      typeof message === 'string' &&
+      message.includes('https://fb.me/react-unsafe-component-lifecycles')
+    ) {
+      return;
+    }
+    _warn(message, ...args);
+  };
+}
+
+if (!__DEV__ && navigator.serviceWorker) {
+  navigator.serviceWorker.register('/service-worker.js');
+}
+
+if ('addEventListener' in document && 'FastClick' in window) {
+  document.addEventListener(
+    'DOMContentLoaded',
+    () => {
+      // tslint:disable-next-line: no-string-literal
+      window['FastClick'].attach(document.body);
+    },
+    false,
+  );
+}
+
 loginByUserToken().then(() => {
-  ReactDOM.render(
+  const _FinalApp = (
     <IntlProvider locale="en">
       <ConfigProvider locale={zhCN}>
         <Provider store={store}>
@@ -59,7 +89,11 @@ loginByUserToken().then(() => {
           </ConnectedRouter>
         </Provider>
       </ConfigProvider>
-    </IntlProvider>,
-    document.getElementById('root'),
+    </IntlProvider>
   );
+
+  // 如果使用了 LazyCompile 插件需要禁用该方式
+  const FinalApp = __DEV__ ? hot(_FinalApp) : _FinalApp;
+
+  ReactDOM.render(FinalApp, document.getElementById('root'));
 });

@@ -12,5 +12,5 @@ module.exports = {
       },
     ],
   ],
-  // 自定义 Plugi
+  // 自定义 Plugin
 };
