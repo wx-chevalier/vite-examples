@@ -7,7 +7,7 @@ import { CustomerMap } from '@/apps/vis/containers/CustomerMap';
 import { Exception403, Exception404 } from '@/skeleton';
 import store from '@/skeleton/env/store';
 
-import { Module, getMenus } from '../../../manifest';
+import { getMenus, Module } from '../../../manifest';
 import { NavLayout } from '../../layouts/NavLayout';
 import AppContainer from '../AppContainer';
 

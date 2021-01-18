@@ -5,9 +5,9 @@ import * as S from 'ufc-schema';
 
 import { i18nFormat } from '@/i18n';
 import {
-  HOST,
   getToken,
   history,
+  HOST,
   isTokenExpired,
   setAuthority,
   setToken,

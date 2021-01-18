@@ -31,7 +31,6 @@
     "dev": "tsc -w --project ./tsconfig.cjs.json",
     "lint": "run-p lint:*",
     "lint:es": "cross-env PARSER_NO_WATCH=true eslint . --cache --ext js,md,ts,tsx -f friendly --max-warnings 10",
-    "lint:ts": "tslint -p . -t stylish",
     "lint:tsc": "tsc -p tsconfig.json --incremental false --noEmit",
     "test": "jest --config ./scripts/jest/jest.config.js",
     "test:cov": "npm run cleanCov && npm test -- --coverage",
@@ -44,7 +43,7 @@
     "yargs": "^15.3.1"
   },
   "devDependencies": {
-    "@m-fe/app-config": "^0.7.6",
+    "@m-fe/app-config": "^0.7.18",
     "@types/inquirer": "^6.5.0",
     "cross-env": "^7.0.2",
     "webpack": "^4.43.0"

@@ -23,9 +23,8 @@
     "dev": "webpack-dev-server --config ./scripts/webpack/webpack.config.dev.js --hot --progress",
     "dev:umd": "webpack-dev-server --config ./scripts/webpack/webpack.config.umd.dev.js --hot",
     "lint": "run-p lint:*",
-    "lint:es": "cross-env PARSER_NO_WATCH=true eslint . --cache --ext js,md,ts,tsx -f friendly --max-warnings 10",
+    "lint:es": "cross-env PARSER_NO_WATCH=true eslint . --cache --ext js,md,ts,tsx -f friendly --max-warnings 100 --fix",
     "lint:style": "stylelint **/*.less --cache",
-    "lint:ts": "tslint -p . -t stylish",
     "lint:tsc": "tsc -p tsconfig.json --incremental false --noEmit",
     "prebuild": "yarn clean && yarn cleanCov",
     "start": "yarn dev",
@@ -35,8 +34,10 @@
     "test:watch": "npm test -- --watch"
   },
   "dependencies": {
-    "@ant-design/icons": "^4.1.0",
-    "@ant-design/pro-layout": "^5.0.12",
+    "@ant-design/colors": "^5.0.1",
+    "@ant-design/compatible": "^1.0.8",
+    "@ant-design/icons": "^4.3.0",
+    "@ant-design/pro-layout": "^6.10.6",
     "@hot-loader/react-dom": "^16.13.0",
     "antd": "^4.2.4",
     "axios": "^0.19.2",
@@ -49,8 +50,8 @@
     "lodash": "^4.17.15",
     "mobile-detect": "^1.4.4",
     "prop-types": "^15.7.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
     "react-fxxking-hooks": "^1.0.2",
     "react-inlinesvg": "^1.2.0",
     "react-intl": "^4.5.4",
@@ -67,7 +68,7 @@
     "urijs": "^1.19.2"
   },
   "devDependencies": {
-    "@m-fe/app-config": "^0.7.6",
+    "@m-fe/app-config": "^0.7.18",
     "@types/jwt-decode": "^2.2.1",
     "cross-env": "^7.0.2",
     "eslint": "^7.0.0",

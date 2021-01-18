@@ -32,17 +32,16 @@
     "lint": "run-p lint:*",
     "lint:es": "cross-env PARSER_NO_WATCH=true eslint . --cache --ext js,md,ts,tsx -f friendly --max-warnings 10",
     "lint:style": "stylelint **/*.less --cache",
-    "lint:ts": "tslint -p . -t stylish",
     "lint:tsc": "tsc -p tsconfig.json --incremental false --noEmit",
     "start": "npm run dev",
     "storybook": "start-storybook -p 6006"
   },
   "dependencies": {
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react": "17.0.1",
+    "react-dom": "17.0.1"
   },
   "devDependencies": {
-    "@m-fe/app-config": "^0.7.6",
+    "@m-fe/app-config": "^0.7.18",
     "@storybook/addon-actions": "^5.3.18",
     "@storybook/addon-info": "^5.3.18",
     "@storybook/addon-links": "^5.3.18",

@@ -6,7 +6,6 @@ import * as S from 'ufc-schema';
 import { UfoState } from '@/ducks';
 
 import { userActions } from '../../ducks/user';
-
 import styles from './index.less';
 
 export interface IUserMeshProps extends RouteComponentProps {

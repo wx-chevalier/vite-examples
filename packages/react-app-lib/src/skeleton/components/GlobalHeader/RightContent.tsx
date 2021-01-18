@@ -7,23 +7,21 @@ import { formatMessage } from '@/i18n';
 
 import HeaderSearch from '../HeaderSearch';
 import SelectLang from '../LangSelector';
-
+import styles from './index.less';
 import { NoticeIconView } from './NoticeIconView';
 import { UserDropdown as User } from './UserDropdown';
-
-import styles from './index.less';
 
 export type SiderTheme = 'light' | 'dark';
 export interface RightContentProps {
   theme?: SiderTheme;
-  layout?: 'sidemenu' | 'topmenu';
+  layout?: 'top' | 'side' | 'mix';
 }
 
 export const RightContent: React.SFC<RightContentProps> = props => {
   const { theme, layout } = props;
   let className = styles.right;
 
-  if (theme === 'dark' && layout === 'topmenu') {
+  if (theme === 'dark' && layout === 'top') {
     className = `${styles.right}  ${styles.dark}`;
   }
 

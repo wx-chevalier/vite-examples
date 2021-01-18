@@ -1,7 +1,6 @@
 import jwtDecode from 'jwt-decode';
 
 import { setRequestHeader } from '../api/umi/request';
-
 import { axiosAgent } from './../api/axios/agent';
 
 /** 基于 Token 的鉴权方式 */

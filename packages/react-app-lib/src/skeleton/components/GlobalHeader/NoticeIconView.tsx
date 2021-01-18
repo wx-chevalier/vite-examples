@@ -1,4 +1,4 @@
-import { Tag, message } from 'antd';
+import { message, Tag } from 'antd';
 import groupBy from 'lodash/groupBy';
 import moment from 'moment';
 import React, { Component } from 'react';
@@ -9,7 +9,6 @@ import { CurrentUser } from '@/models/UserModel';
 import { notices } from '@/skeleton/api/__mock__/notices';
 
 import NoticeIcon from '../NoticeIcon';
-
 import styles from './index.less';
 
 export interface NoticeIconViewProps {

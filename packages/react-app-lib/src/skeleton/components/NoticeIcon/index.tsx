@@ -6,10 +6,8 @@ import React, { Component } from 'react';
 import { NoticeIconData } from '@/models/global';
 
 import HeaderDropdown from '../HeaderDropdown';
-
-import NoticeList, { NoticeIconTabProps } from './NoticeList';
-
 import styles from './index.less';
+import NoticeList, { NoticeIconTabProps } from './NoticeList';
 
 const { TabPane } = Tabs;
 

@@ -1,7 +1,6 @@
 import * as React from 'react';
 
 import { checkIsInstantiation } from '../types/comp';
-
 import { checkPermissions } from './permissions';
 
 /**

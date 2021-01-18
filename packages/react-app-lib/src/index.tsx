@@ -1,9 +1,10 @@
-import { ConfigProvider } from 'antd';
 import 'antd/dist/antd.less'; // 引入官方提供的 less 样式入口文件
+import './skeleton/styles/reset.less';
+
+import { ConfigProvider } from 'antd';
 import zhCN from 'antd/lib/locale-provider/zh_CN';
 import { ConnectedRouter } from 'connected-react-router';
 import dayjs from 'dayjs';
-import timeZone from 'dayjs-ext/plugin/timeZone';
 import zh from 'dayjs/locale/zh-cn';
 import advancedFormat from 'dayjs/plugin/advancedFormat';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
@@ -15,6 +16,7 @@ import relativeTime from 'dayjs/plugin/relativeTime';
 import utc from 'dayjs/plugin/utc';
 import weekOfYear from 'dayjs/plugin/weekOfYear';
 import weekYear from 'dayjs/plugin/weekYear';
+import timeZone from 'dayjs-ext/plugin/timeZone';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { hot } from 'react-hot-loader/root';
@@ -26,8 +28,6 @@ import { loginByUserToken } from './apis';
 import App from './skeleton/containers/App';
 import { history } from './skeleton/env/history';
 import store from './skeleton/env/store';
-
-import './skeleton/styles/reset.less';
 
 smoothscroll.polyfill();
 

@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { IAuthorityType, checkPermissions } from './permissions';
+import { checkPermissions, IAuthorityType } from './permissions';
 
 interface AuthorizedProps {
   authority: IAuthorityType;

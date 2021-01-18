@@ -8,7 +8,6 @@ import { logout } from '@/apis';
 import { CurrentUser } from '@/models';
 
 import HeaderDropdown from '../HeaderDropdown';
-
 import styles from './index.less';
 
 export interface GlobalHeaderRightProps {

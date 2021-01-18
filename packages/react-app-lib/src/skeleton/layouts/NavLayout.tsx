@@ -14,10 +14,8 @@ import { checkPermissions } from '@/skeleton/auth';
 import { getAuthority, setAuthority } from '@/skeleton/auth/authority';
 
 import { RightContent } from '../components/GlobalHeader/RightContent';
-
-import { NavContext } from './NavContext';
-
 import styles from './index.less';
+import { NavContext } from './NavContext';
 
 export interface NavLayoutProps extends ProLayoutProps {
   matchedPath?: string;
@@ -93,11 +91,13 @@ export const NavLayout: React.FC<NavLayoutProps> = props => {
           name: 'Root',
           routes: getMenus(),
         }}
-        title="优联云·运营平台"
+        title="React App Lib"
         siderWidth={240}
         navTheme={'light'}
         menuDataRender={menuDataRender}
-        menuItemRender={(menuItemProps, defaultDom) => {
+        menuItemRender={menuItemProps => {
+          const defaultDom = menuItemProps.name;
+
           if (menuItemProps.isUrl) {
             return defaultDom;
           }

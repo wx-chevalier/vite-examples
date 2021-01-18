@@ -7,7 +7,6 @@ import * as React from 'react';
 import { formatMessage, getLocale, setLocale } from '@/i18n';
 
 import HeaderDropdown from '../HeaderDropdown';
-
 import styles from './index.less';
 
 interface SelectLangProps {

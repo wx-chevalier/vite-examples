@@ -36,8 +36,7 @@
     "upgrade": "./scripts/tools/upgrade_pkgs.sh"
   },
   "devDependencies": {
-    "@m-fe/app-config": "^0.7.6",
-    "@m-fe/tslint-config": "^0.0.5",
+    "@m-fe/app-config": "^0.7.18",
     "@svgr/webpack": "^5.4.0",
     "prettier": "2.2.0",
     "tslint": "^6.1.3"

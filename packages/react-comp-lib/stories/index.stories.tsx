@@ -8,6 +8,6 @@ storiesOf('Exception', module).add(
   'with text',
   () => <Exception onClick={action('clicked')}>Hello Button</Exception>,
   {
-    info: { inline: true }
+    info: { inline: true },
   }
 );

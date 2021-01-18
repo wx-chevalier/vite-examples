@@ -1,15 +1,14 @@
 import { routerMiddleware } from 'connected-react-router';
 import {
-  ReducersMapObject,
   applyMiddleware,
   compose,
   createStore,
+  ReducersMapObject,
 } from 'redux';
 import { middleware as reduxPackMiddleware } from 'redux-pack-fsa';
 import thunkMiddleware from 'redux-thunk';
 
 import { configReducer } from '../../ducks';
-
 import { history } from './history';
 
 declare let __DEV__: boolean;

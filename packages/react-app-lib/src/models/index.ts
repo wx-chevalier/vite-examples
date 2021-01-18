@@ -1,2 +1,2 @@
-export * from './UserModel';
 export * from './global';
+export * from './UserModel';

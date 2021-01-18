@@ -1,6 +1,6 @@
 import { connectRouter } from 'connected-react-router';
 import { History } from 'history';
-import { ReducersMapObject, combineReducers } from 'redux';
+import { combineReducers, ReducersMapObject } from 'redux';
 
 import userReducer, { IState as UserState } from '../apps/user/ducks/user';
 

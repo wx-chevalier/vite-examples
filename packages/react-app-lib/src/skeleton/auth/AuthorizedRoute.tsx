@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Redirect, Route } from 'react-router';
 
-import { IAuthorityType } from './permissions';
 import { Authorized } from './Authorized';
+import { IAuthorityType } from './permissions';
 
 interface AuthorizedRoutePops {
   currentAuthority: string;

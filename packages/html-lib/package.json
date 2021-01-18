@@ -1,0 +1,21 @@
+{
+  "name": "html-template",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "dev": "open-cli http://localhost:1234 && nodemon server.js",
+    "lint": "echo 'lint'",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^4.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6",
+    "open-cli": "^6.0.1"
+  }
+}
