@@ -1,19 +1,6 @@
 import { MenuDataItem } from '@ant-design/pro-layout';
-import React from 'react';
-import { ComponentType } from 'react';
 
 import { getGlobalUser } from '@/apis';
-
-export interface ResolvedModule {
-  default: ComponentType<any>;
-  reducer?: object;
-}
-
-export interface Module {
-  type: 'page' | 'module' | 'app' | 'widget' | 'extension';
-  component?: React.ComponentType;
-  loader?: () => Promise<ResolvedModule>;
-}
 
 export const getMenus: () => MenuDataItem[] = () => {
   const profile = getGlobalUser();

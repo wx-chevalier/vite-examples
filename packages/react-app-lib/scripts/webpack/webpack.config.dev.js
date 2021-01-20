@@ -15,6 +15,11 @@ const config = merge(devConfig, themeConfig, {
   devServer: {
     contentBase: path.resolve(__dirname, '../../public'),
   },
+  resolve: {
+    alias: {
+      'react-dom': '@hot-loader/react-dom',
+    },
+  },
 });
 
 module.exports = config;

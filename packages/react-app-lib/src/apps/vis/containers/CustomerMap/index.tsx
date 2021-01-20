@@ -3,7 +3,7 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import { RouteComponentProps, withRouter } from 'react-router';
 
-import { UfoState } from '@/ducks';
+import { AppState } from '@/ducks';
 
 import styles from './index.less';
 
@@ -58,6 +58,6 @@ export class CustomerMapComp extends React.PureComponent<
 }
 
 export const CustomerMap = connect(
-  (_state: UfoState) => ({}),
+  (_state: AppState) => ({}),
   {},
 )(withRouter(CustomerMapComp));

@@ -1,7 +1,11 @@
 import { AxiosInstance, AxiosRequestConfig } from 'axios';
 
-import { axiosAgent as defaultAgent, uploadAgent } from './agent';
-import notice, { Notice } from './notice';
+import {
+  axiosAgent as defaultAgent,
+  Notice,
+  notice,
+  uploadAgent,
+} from './agent';
 
 interface ResultNotice {
   title: string;

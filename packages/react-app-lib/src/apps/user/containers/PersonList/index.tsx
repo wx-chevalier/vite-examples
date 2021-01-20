@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { RouteComponentProps, withRouter } from 'react-router';
 import * as S from 'ufc-schema';
 
-import { UfoState } from '@/ducks';
+import { AppState } from '@/ducks';
 
 import { userActions } from '../../ducks/user';
 import styles from './index.less';
@@ -57,7 +57,7 @@ export class UserListComp extends React.PureComponent<
 }
 
 export const UserList = connect(
-  (state: UfoState) => ({
+  (state: AppState) => ({
     users: state.user.users,
   }),
   {

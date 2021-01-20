@@ -1,4 +1,2 @@
-export * from './dev';
-export * from './history';
-export * from './store';
-export * from './theme';
+export * from './redux_store';
+export * from './singleton';

@@ -3,14 +3,16 @@ module.exports = {
     [
       '@m-fe',
       {
-        import: [{ libraryName: 'antd-mobile', style: true }],
+        import: true,
         react: true,
         typescript: true,
+        esmodules: false,
         targets: {
-          browsers: ['last 2 versions', 'safari >= 7', 'ie >= 11'],
+          browsers: ['last 2 versions', 'safari >= 7', 'ie >= 10'],
         },
       },
     ],
   ],
   // 自定义 Plugin
+  plugins: ['react-hot-loader/babel'],
 };
