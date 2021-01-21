@@ -1,6 +1,5 @@
 import { GlobalOutlined } from '@ant-design/icons';
 import { Menu } from 'antd';
-import { ClickParam } from 'antd/es/menu';
 import classNames from 'classnames';
 import * as React from 'react';
 
@@ -16,7 +15,8 @@ interface SelectLangProps {
 const SelectLang: React.FC<SelectLangProps> = props => {
   const { className } = props;
   const selectedLang = getLocale();
-  const changeLang = ({ key }: ClickParam): void => setLocale(key, false);
+  const changeLang = ({ key }: { key: React.Key }): void =>
+    setLocale(key, false);
   const locales = ['zh-CN', 'zh-TW', 'en-US', 'pt-BR'];
   const languageLabels = {
     'zh-CN': '简体中文',

@@ -1,6 +1,5 @@
 import { LogoutOutlined } from '@ant-design/icons';
 import { Avatar, Menu, Spin } from 'antd';
-import { ClickParam } from 'antd/es/menu';
 import * as React from 'react';
 import { FormattedMessage } from 'react-intl';
 
@@ -16,7 +15,7 @@ export interface GlobalHeaderRightProps {
 }
 
 export class UserDropdown extends React.Component<GlobalHeaderRightProps> {
-  onMenuClick = (event: ClickParam) => {
+  onMenuClick = (event: { key: React.Key }) => {
     const { key } = event;
 
     if (key === 'logout') {

@@ -74,7 +74,7 @@ export class RootAppComp extends React.Component<IAppProps, IAppState> {
             path={`/vis/customer-map`}
             component={CustomerMap}
           />
-
+          <Route exact={true} path={`/auth/login`} component={LoginPage} />
           <Redirect to={`/vis/customer-map`} />
         </Switch>
       </NavLayout>
