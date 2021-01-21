@@ -1,44 +1,216 @@
-:global(.ant-pro-sider-menu-sider) {
-  flex: 0 0 220px;
-  max-width: 220px;
-  min-width: 220px;
-  width: 220px;
+:global(.ant-layout) {
+  height: 100vh;
 
-  :global(.ant-pro-sider-menu-logo) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: 0;
-    h1 {
-      display: none;
+  // 全局容器
+  :global(.ant-pro-basicLayout .ant-layout) {
+    height: 100%;
+    overflow: hidden;
+    background-color: #eff1f7;
+    box-shadow: unset;
+
+    > div {
+      height: 100%;
+    }
+  }
+
+  :global(.ant-layout-header) {
+    margin: 0 16px;
+    box-shadow: 2px 0 6px rgba(0, 21, 41, 0.35);
+    width: unset !important;
+
+    .indicator {
+      font-size: 16px;
+      margin-left: 8px;
+      color: rgba(0, 0, 0, 0.45);
+      display: flex;
+    }
+  }
+
+  :global(.ant-layout-content) {
+    margin: 16px !important;
+
+    > div > div {
+      overflow-x: hidden;
+      overflow-y: auto;
     }
   }
 }
 
-:global(.ant-layout-header) {
-  margin: 0 24px;
-  box-shadow: 2px 0 6px rgba(0, 21, 41, 0.35);
-  width: unset !important;
-}
+@menuColor: #acbbdc;
+@menuBgColor: rgba(59, 69, 94);
 
-:global(.ant-layout-content) {
-  box-shadow: 2px 0 6px rgba(0, 21, 41, 0.35);
-  background-color: white;
-  margin: 24px;
-}
+:global(.ant-pro-sider) {
+  flex: 0 0 220px;
+  max-width: 220px;
+  min-width: 220px;
+  width: 220px;
+  background: rgba(59, 69, 94) !important;
 
-.selectedMenu {
-  color: white;
-  background: #6874e2;
-  box-shadow: 0 0 7px 0 rgba(255, 255, 255, 0.36),
-    0 2px 10px 0 rgba(104, 116, 226, 0.44);
-  border-radius: 0 10px 10px 0;
-  transform: translateX(-24px);
-  padding-left: 24px;
-}
+  > div > :global(.ant-menu) {
+    height: calc(100vh - 64px);
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
 
-.selectedMenuCollapsed {
-  border-radius: 10px;
-  transform: translateX(-16px);
-  padding-left: 16px;
+  :global(.ant-pro-sider-logo#logo) {
+    display: flex;
+    align-items: center;
+    box-shadow: none;
+    justify-content: center;
+    background: rgba(59, 69, 94);
+    max-height: 90px;
+    overflow: hidden;
+
+    > a {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h1 {
+      display: none;
+    }
+  }
+
+  :global(li.ant-menu-item) {
+    height: 45px !important;
+    line-height: 45px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  :global(.ant-menu) {
+    background: @menuBgColor;
+
+    :global(.menu-indicator) {
+      height: 5px;
+      width: 5px;
+      border-radius: 50%;
+      background: @menuColor;
+      display: inline-block;
+      margin-right: 8px;
+    }
+
+    .menuItem {
+      display: flex;
+      align-items: center;
+      color: @menuColor;
+      padding-left: 24px;
+      height: 45px;
+      cursor: pointer;
+
+      svg {
+        fill: @menuColor;
+        margin-right: 16px;
+        transform: scale(0.8);
+      }
+    }
+
+    .selectedMenu {
+      background: rgb(27, 33, 49);
+    }
+  }
+
+  :global(.ant-menu-submenu) {
+    background: @menuBgColor;
+
+    :global(.ant-menu-submenu) {
+      padding-left: 42px !important;
+    }
+
+    :global(.ant-menu-item) {
+      background: @menuBgColor;
+
+      span {
+        color: @menuColor;
+        font-size: 14px;
+      }
+
+      &:hover {
+        span {
+          color: white;
+        }
+      }
+
+      .menuItem {
+        padding-left: 66px;
+      }
+
+      .selectedMenu {
+        > span {
+          color: white;
+        }
+      }
+    }
+
+    :global(.ant-menu-submenu-title) {
+      color: @menuColor;
+      background: @menuBgColor;
+      font-size: 14px;
+      padding: 0 !important;
+      margin: 0;
+
+      > span {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 24px;
+      }
+
+      svg {
+        fill: @menuColor;
+        margin-right: 16px;
+        transform: scale(0.8);
+      }
+    }
+  }
+
+  :global(.ant-menu-submenu-inline
+      > .ant-menu-submenu-title
+      .ant-menu-submenu-arrow:before) {
+    background: @menuColor !important;
+  }
+
+  :global(.ant-menu-submenu-inline
+      > .ant-menu-submenu-title
+      .ant-menu-submenu-arrow:after) {
+    background: @menuColor !important;
+  }
+
+  // 收缩状态下状态控制
+  :global(.ant-menu-inline-collapsed) {
+    :global(.ant-menu-submenu-title) {
+      display: flex;
+      justify-content: center;
+
+      span {
+        height: 100%;
+        padding-left: 0;
+        width: 24px;
+      }
+
+      span > svg {
+        margin-right: 0;
+      }
+
+      span > span {
+        display: none;
+      }
+    }
+
+    .menuItem {
+      justify-content: center;
+
+      span {
+        display: none;
+      }
+    }
+  }
+
+  // 不显示提示框内容
+  :global(.ant-menu-inline-collapsed-tooltip),
+  :global(.ant-menu-submenu-popup) {
+    display: none !important;
+  }
 }

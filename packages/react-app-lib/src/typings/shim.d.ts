@@ -97,3 +97,4 @@ declare module 'dayjs/locale/en';
 declare module 'rc-tween-one/lib/plugin/ChildrenPlugin';
 declare module 'dayjs-ext/plugin/timeZone';
 declare module 'react-hls-player';
+declare module 'ant-design-pro/lib/Ellipsis';

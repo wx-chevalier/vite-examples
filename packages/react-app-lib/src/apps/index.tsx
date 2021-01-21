@@ -13,6 +13,7 @@ import { CustomerMap } from '@/apps/vis/containers/CustomerMap';
 import { defaultStore } from '@/skeleton/env/redux_store';
 
 import { getMenus } from '../manifest';
+import { Copyright } from './shared/components/Copyright';
 import { NavLayout } from './shared/layouts/NavLayout';
 
 export interface IAppProps {}
@@ -74,7 +75,7 @@ export class RootAppComp extends React.Component<IAppProps, IAppState> {
             path={`/vis/customer-map`}
             component={CustomerMap}
           />
-          <Route exact={true} path={`/auth/login`} component={LoginPage} />
+          <Route exact={true} path={`/first-menu`} component={Copyright} />
           <Redirect to={`/vis/customer-map`} />
         </Switch>
       </NavLayout>

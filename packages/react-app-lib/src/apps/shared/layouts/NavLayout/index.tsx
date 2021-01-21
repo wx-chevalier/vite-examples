@@ -8,14 +8,16 @@ import {
   getAuthority,
   setAuthority,
 } from '@m-fe/react-commons';
+import Ellipsis from 'ant-design-pro/lib/Ellipsis';
+import cn from 'classnames';
 import * as React from 'react';
-import { Link } from 'react-router-dom';
 
 import BlueLogo from '@/assets/logo_blue.svg';
 import ULogo from '@/assets/logo_u.svg';
 import { getMenus } from '@/manifest';
-import { formatMessage } from '@/skeleton';
+import { formatMessage, history } from '@/skeleton';
 
+import { ColoredLabel } from '../../components/Label';
 import { RightContent } from '../GlobalHeader/RightContent';
 import styles from './index.less';
 import { NavContext } from './NavContext';
@@ -36,9 +38,6 @@ const menuDataRender = (menuList: MenuDataItem[]): MenuDataItem[] =>
     return checkPermissions(item.authority, localItem, null) as MenuDataItem;
   });
 
-const defaultRenderCollapsedButton = (collapsed?: boolean) =>
-  collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />;
-
 const footerRender: NavLayoutProps['footerRender'] = () => {
   return (
     <div
@@ -52,9 +51,9 @@ const footerRender: NavLayoutProps['footerRender'] = () => {
         fontSize: 10,
       }}
     >
-      <div>© 2019-2020 Unionfab 版权所有ICP 证：</div>
+      <div>© 2019-2020 XXX 版权所有ICP 证：</div>
       <a href="http://www.beian.miit.gov.cn/publish/query/indexFirst.action">
-        沪ICP备17023219号
+        XXXXXXX
       </a>
     </div>
   );
@@ -64,10 +63,50 @@ export const NavLayout: React.FC<NavLayoutProps> = props => {
   const { children, matchedPath } = props;
   const [authority, _setAuthority] = React.useState(getAuthority());
 
-  const [collapsed, toggleCollapse] = React.useState(true);
+  const [isCollapsed, toggleCollapse] = React.useState(true);
 
   const handleMenuCollapse = (payload: boolean): void => {
     toggleCollapse(payload);
+  };
+
+  const defaultRenderCollapsedButton = (collapsed?: boolean) =>
+    collapsed ? (
+      <MenuUnfoldOutlined
+        size={24}
+        style={{ fontSize: 18 }}
+        onClick={() => {
+          toggleCollapse(!collapsed);
+        }}
+      />
+    ) : (
+      <MenuFoldOutlined
+        size={24}
+        style={{ fontSize: 18 }}
+        onClick={() => {
+          toggleCollapse(!collapsed);
+        }}
+      />
+    );
+
+  const renderHeaderNav = () => {
+    const indicator = (
+      <>
+        <ColoredLabel
+          style={{ marginLeft: 8, fontSize: 16, cursor: 'pointer' }}
+        >
+          <Ellipsis tooltip={false} length={25}>
+            React App Lib
+          </Ellipsis>
+        </ColoredLabel>
+      </>
+    );
+
+    return (
+      <span style={{ display: 'inline-flex', alignItems: 'center' }}>
+        <span>{defaultRenderCollapsedButton(isCollapsed)}</span>
+        {indicator}
+      </span>
+    );
   };
 
   return (
@@ -82,12 +121,12 @@ export const NavLayout: React.FC<NavLayoutProps> = props => {
     >
       <ProLayout
         {...props}
-        collapsed={collapsed}
+        collapsed={isCollapsed}
         logo={
-          collapsed ? (
-            <ULogo style={{ transform: 'scale(0.2)' }} />
+          isCollapsed ? (
+            <ULogo style={{ width: 26, height: 32 }} />
           ) : (
-            <BlueLogo style={{ transform: 'scale(0.2)' }} />
+            <BlueLogo style={{ width: 150, height: 50 }} />
           )
         }
         route={{
@@ -95,64 +134,53 @@ export const NavLayout: React.FC<NavLayoutProps> = props => {
           routes: getMenus(),
         }}
         title="React App Lib"
-        siderWidth={240}
-        navTheme={'light'}
+        siderWidth={200}
+        navTheme="dark"
         menuDataRender={menuDataRender}
         menuItemRender={menuItemProps => {
-          const defaultDom = menuItemProps.name;
+          const defaultDom = menuItemProps.icon ? (
+            <span>
+              <span>{menuItemProps.icon}</span>
+              {menuItemProps.name}
+            </span>
+          ) : (
+            menuItemProps.name
+          );
 
           if (menuItemProps.isUrl) {
-            return defaultDom;
-          }
-
-          // 判断是否选中
-          if ((matchedPath || '').startsWith(menuItemProps.path)) {
             return (
-              <div
-                className={
-                  collapsed ? styles.selectedMenuCollapsed : styles.selectedMenu
-                }
-              >
+              <div className={cn(styles.menuItem)} id={menuItemProps.key}>
                 {defaultDom}
               </div>
             );
           }
 
-          return <Link to={menuItemProps.path}>{defaultDom}</Link>;
-        }}
-        collapsedButtonRender={_collapsed => {
+          // 判断是否选中
+          if ((matchedPath || '').startsWith(menuItemProps.path)) {
+            return (
+              <div className={cn(styles.selectedMenu, styles.menuItem)}>
+                {defaultDom}
+              </div>
+            );
+          }
+
           return (
             <span>
-              <span>{defaultRenderCollapsedButton(_collapsed)}</span>
-              <span style={{ marginLeft: 8, fontSize: 16 }}>
-                优联云·运营平台
-              </span>
+              <div
+                className={styles.menuItem}
+                onClick={() => {
+                  history.push(menuItemProps.path);
+                }}
+              >
+                {defaultDom}
+              </div>
             </span>
           );
         }}
-        breadcrumbRender={(routers = []) => {
-          return [
-            {
-              path: '/',
-              breadcrumbName: formatMessage({
-                id: 'menu.home',
-                defaultMessage: 'Home',
-              }),
-            },
-            ...routers,
-          ];
-        }}
-        itemRender={(route, _, routes, paths) => {
-          const first = routes.indexOf(route) === 0;
-
-          return first ? (
-            <Link to={paths.join('/')}>{route.breadcrumbName}</Link>
-          ) : (
-            <span>{route.breadcrumbName}</span>
-          );
-        }}
+        collapsedButtonRender={false}
         footerRender={footerRender}
         formatMessage={formatMessage}
+        headerContentRender={renderHeaderNav}
         rightContentRender={rightProps => <RightContent {...rightProps} />}
         onCollapse={handleMenuCollapse}
       >
