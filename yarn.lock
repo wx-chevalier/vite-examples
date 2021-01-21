@@ -84,27 +84,6 @@
     use-media-antd-query "^1.0.3"
     warning "^4.0.3"
 
-"@ant-design/pro-layout@^6.11.1":
-  version "6.11.1"
-  resolved "https://registry.npm.taobao.org/@ant-design/pro-layout/download/@ant-design/pro-layout-6.11.1.tgz#261a1a3595f3e38cf02357e1e51bcbff6e8241fe"
-  integrity sha1-JhoaNZXz44zwI1fh5RvL/26CQf4=
-  dependencies:
-    "@ant-design/icons" "^4.0.0"
-    "@ant-design/pro-provider" "1.4.2"
-    "@ant-design/pro-utils" "1.11.0"
-    "@umijs/route-utils" "^1.0.33"
-    classnames "^2.2.6"
-    omit.js "^2.0.2"
-    path-to-regexp "2.4.0"
-    rc-resize-observer "^0.2.1"
-    rc-util "^5.0.6"
-    react-copy-to-clipboard "^5.0.1"
-    unstated-next "^1.1.0"
-    use-json-comparison "^1.0.3"
-    use-media-antd-query "^1.0.3"
-    use-url-search-params "^2.3.13"
-    warning "^4.0.3"
-
 "@ant-design/pro-provider@1.4.2":
   version "1.4.2"
   resolved "https://registry.npm.taobao.org/@ant-design/pro-provider/download/@ant-design/pro-provider-1.4.2.tgz#594ba76dd1adb30ae996a2dfc17d730d25ed40e7"
@@ -116,18 +95,6 @@
   version "1.10.5"
   resolved "https://registry.npm.taobao.org/@ant-design/pro-utils/download/@ant-design/pro-utils-1.10.5.tgz#0bb12ccfac44b0cf645c4eb8f71bd4e41f1716d4"
   integrity sha1-C7Esz6xEsM9kXE649xvU5B8XFtQ=
-  dependencies:
-    "@ant-design/icons" "^4.3.0"
-    "@ant-design/pro-provider" "1.4.2"
-    classnames "^2.2.6"
-    fast-deep-equal "^3.1.3"
-    moment "^2.27.0"
-    rc-util "^5.0.6"
-
-"@ant-design/pro-utils@1.11.0":
-  version "1.11.0"
-  resolved "https://registry.npm.taobao.org/@ant-design/pro-utils/download/@ant-design/pro-utils-1.11.0.tgz?cache=0&sync_timestamp=1610946804167&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40ant-design%2Fpro-utils%2Fdownload%2F%40ant-design%2Fpro-utils-1.11.0.tgz#23e94be003114f6de30be6b12ba7c6144ebbf102"
-  integrity sha1-I+lL4AMRT23jC+axK6fGFE678QI=
   dependencies:
     "@ant-design/icons" "^4.3.0"
     "@ant-design/pro-provider" "1.4.2"
@@ -2151,11 +2118,6 @@
     object-assign "^4.1.1"
     scheduler "^0.20.0"
 
-"@interactjs/types@1.10.2":
-  version "1.10.2"
-  resolved "https://registry.npm.taobao.org/@interactjs/types/download/@interactjs/types-1.10.2.tgz#45a74d019f9b3e8fccd3ccc288b55bcf510106bc"
-  integrity sha1-RadNAZ+bPo/M08zCiLVbz1EBBrw=
-
 "@interactjs/types@1.9.17":
   version "1.9.17"
   resolved "https://registry.yarnpkg.com/@interactjs/types/-/types-1.9.17.tgz#a6b2ae0939075b42d6a99a4e5a706d927179c892"
@@ -2358,10 +2320,10 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@m-fe/app-config@^0.7.18":
-  version "0.7.18"
-  resolved "https://registry.npmjs.org/@m-fe/app-config/-/app-config-0.7.18.tgz#19e1376449eff7433bf3c58ad16d690271511a3c"
-  integrity sha512-1Waf9K5StXQL+0LIgA9cEPnap2VlFD2S/n7uKgWP7Vx4u7eBa+FUGUSXGKJ9cLOW1aj5VjoyDiTXjh2mi64SdQ==
+"@m-fe/app-config@^0.7.20":
+  version "0.7.20"
+  resolved "https://registry.npm.taobao.org/@m-fe/app-config/download/@m-fe/app-config-0.7.20.tgz#f3e264c77d767b3eafcb2909f91912e46693a805"
+  integrity sha1-8+Jkx312ez6vyykJ+RkS5GaTqAU=
   dependencies:
     "@m-fe/babel-preset" "^0.0.5"
     "@m-fe/browserslist-config" "^0.0.1"
@@ -2376,7 +2338,7 @@
     "@m-fe/stylelint-config" "^0.0.9"
     "@m-fe/tsconfig" "^0.0.4"
     "@m-fe/tslint-config" "^0.0.5"
-    "@m-fe/webpack-config" "^0.1.28"
+    "@m-fe/webpack-config" "^0.1.29"
     "@svgr/webpack" "^5.4.0"
     "@types/classnames" "^2.2.10"
     "@types/enzyme" "^3.10.5"
@@ -2532,21 +2494,10 @@
     prettier-plugin-sh "^0.3.0"
     prettier-plugin-toml "^0.3.1"
 
-"@m-fe/react-commons@^0.0.5":
-  version "0.0.5"
-  resolved "https://registry.npmjs.org/@m-fe/react-commons/-/react-commons-0.0.5.tgz#309dd0938d8c01ccdcfd593a3f6437f6a396d6f3"
-  integrity sha512-DpxnCtOO/NCEyFx/stATUorWyiBSRzeqe+cW/hJle91THzrlxvW7My4YSYjqDfaLNx5cK/nUQUFRXP/dZFYZcw==
-  dependencies:
-    "@ant-design/colors" "^5.0.1"
-    "@ant-design/pro-layout" "^6.11.1"
-    "@m-fe/utils" "^0.5.10"
-    antd "^4.10.3"
-    dayjs-ext "^2.2.0"
-    interactjs "^1.10.2"
-    react "^17.0.1"
-    react-dom "^17.0.1"
-    react-loadable "^5.5.0"
-    webpack-theme-color-replacer "^1.3.15"
+"@m-fe/react-commons@^0.0.6":
+  version "0.0.6"
+  resolved "https://registry.npm.taobao.org/@m-fe/react-commons/download/@m-fe/react-commons-0.0.6.tgz?cache=0&sync_timestamp=1611209303615&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40m-fe%2Freact-commons%2Fdownload%2F%40m-fe%2Freact-commons-0.0.6.tgz#b4c415c398a5e9ae60515966401f15d7aab27f53"
+  integrity sha1-tMQVw5il6a5gUVlmQB8V16qyf1M=
 
 "@m-fe/remark-config@^0.0.1":
   version "0.0.1"
@@ -2604,25 +2555,10 @@
     urijs "^1.19.2"
     uuid "^3.3.3"
 
-"@m-fe/utils@^0.5.10":
-  version "0.5.10"
-  resolved "https://registry.npm.taobao.org/@m-fe/utils/download/@m-fe/utils-0.5.10.tgz#9b23e0065d175798f0de9f16f13345a822d98582"
-  integrity sha1-myPgBl0XV5jw3p8W8TNFqCLZhYI=
-  dependencies:
-    core-js "^3.8.0"
-    dayjs "1.10.3"
-    fast-deep-equal "^2.0.1"
-    history "^4.10.1"
-    lodash.chunk "^4.2.0"
-    lodash.upperfirst "^4.3.1"
-    mobile-detect "^1.4.4"
-    urijs "^1.19.2"
-    uuid-random "^1.3.2"
-
-"@m-fe/webpack-config@^0.1.28":
-  version "0.1.28"
-  resolved "https://registry.npm.taobao.org/@m-fe/webpack-config/download/@m-fe/webpack-config-0.1.28.tgz#725c34ade503f7699fcad9580e17ba363de9e1ee"
-  integrity sha1-clw0reUD92mfytlYDhe6Nj3p4e4=
+"@m-fe/webpack-config@^0.1.29":
+  version "0.1.29"
+  resolved "https://registry.npm.taobao.org/@m-fe/webpack-config/download/@m-fe/webpack-config-0.1.29.tgz#ff0acfe83c6a0d96f616ec2f4552244046d33813"
+  integrity sha1-/wrP6DxqDZb2FuwvRVIkQEbTOBM=
   dependencies:
     "@hot-loader/react-dom" "^17.0.0"
     "@svgr/webpack" "^5.4.0"
@@ -4687,7 +4623,7 @@ ant-design-pro@^2.3.2:
     prop-types "^15.6.2"
     react-fittext "^1.0.0"
 
-antd@^4.10.2, antd@^4.10.3:
+antd@^4.10.2:
   version "4.10.3"
   resolved "https://registry.npm.taobao.org/antd/download/antd-4.10.3.tgz#54da18519470f6c68c348d29e646836321f8ddc0"
   integrity sha1-VNoYUZRw9saMNI0p5kaDYyH43cA=
@@ -6966,11 +6902,6 @@ core-js@^3.2.1, core-js@^3.6.5:
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.6.5.tgz#7395dc273af37fb2e50e9bd3d9fe841285231d1a"
   integrity sha512-vZVEEwZoIsI+vPEuoF9Iqf5H7/M3eeQqWlQnYa8FSKKePuYTf5MWnxb5SDAzCa60b3JBRS5g9b+Dq7b1y/RCrA==
 
-core-js@^3.8.0:
-  version "3.8.2"
-  resolved "https://registry.npm.taobao.org/core-js/download/core-js-3.8.2.tgz?cache=0&sync_timestamp=1609682065690&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcore-js%2Fdownload%2Fcore-js-3.8.2.tgz#0a1fd6709246da9ca8eff5bb0cbd15fba9ac7044"
-  integrity sha1-Ch/WcJJG2pyo7/W7DL0V+6mscEQ=
-
 core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
@@ -7654,7 +7585,7 @@ dayjs-ext@^2.2.0:
     fast-plural-rules "^0.0.1"
     timezone-support "^1.8.0"
 
-dayjs@1.10.3, dayjs@^1.10.3, dayjs@^1.8.30:
+dayjs@^1.10.3, dayjs@^1.8.30:
   version "1.10.3"
   resolved "https://registry.npm.taobao.org/dayjs/download/dayjs-1.10.3.tgz?cache=0&sync_timestamp=1610178181125&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fdayjs%2Fdownload%2Fdayjs-1.10.3.tgz#cf3357c8e7f508432826371672ebf376cb7d619b"
   integrity sha1-zzNXyOf1CEMoJjcWcuvzdst9YZs=
@@ -10866,13 +10797,6 @@ insert-css@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/insert-css/-/insert-css-2.0.0.tgz#eb5d1097b7542f4c79ea3060d3aee07d053880f4"
   integrity sha1-610Ql7dUL0x56jBg067gfQU4gPQ=
-
-interactjs@^1.10.2:
-  version "1.10.2"
-  resolved "https://registry.npm.taobao.org/interactjs/download/interactjs-1.10.2.tgz#b8efa1ecc72fd3e3b8da32ce5082df308b318ba1"
-  integrity sha1-uO+h7Mcv0+O42jLOUILfMIsxi6E=
-  dependencies:
-    "@interactjs/types" "1.10.2"
 
 interactjs@^1.9.17:
   version "1.9.17"
@@ -17043,6 +16967,19 @@ react-router-dom@5.1.2:
     tiny-invariant "^1.0.2"
     tiny-warning "^1.0.0"
 
+react-router-dom@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.npm.taobao.org/react-router-dom/download/react-router-dom-5.2.0.tgz?cache=0&sync_timestamp=1592608787345&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact-router-dom%2Fdownload%2Freact-router-dom-5.2.0.tgz#9e65a4d0c45e13289e66c7b17c7e175d0ea15662"
+  integrity sha1-nmWk0MReEyieZsexfH4XXQ6hVmI=
+  dependencies:
+    "@babel/runtime" "^7.1.2"
+    history "^4.9.0"
+    loose-envify "^1.3.1"
+    prop-types "^15.6.2"
+    react-router "5.2.0"
+    tiny-invariant "^1.0.2"
+    tiny-warning "^1.0.0"
+
 react-router@5.1.2:
   version "5.1.2"
   resolved "https://registry.yarnpkg.com/react-router/-/react-router-5.1.2.tgz#6ea51d789cb36a6be1ba5f7c0d48dd9e817d3418"
@@ -17059,7 +16996,7 @@ react-router@5.1.2:
     tiny-invariant "^1.0.2"
     tiny-warning "^1.0.0"
 
-react-router@^5.2.0:
+react-router@5.2.0, react-router@^5.2.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/react-router/-/react-router-5.2.0.tgz#424e75641ca8747fbf76e5ecca69781aa37ea293"
   integrity sha512-smz1DUuFHRKdcJC0jobGo8cVbhO3x50tCL4icacOlcwDOEQPq4TMqwx3sY1TP+DvtTgz4nm3thuo7A+BK2U0Dw==
@@ -17114,7 +17051,7 @@ react-textarea-autosize@^7.1.0:
     "@babel/runtime" "^7.1.2"
     prop-types "^15.6.0"
 
-react@17.0.1, react@^17.0.1:
+react@17.0.1:
   version "17.0.1"
   resolved "https://registry.npm.taobao.org/react/download/react-17.0.1.tgz?cache=0&sync_timestamp=1610380778018&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact%2Fdownload%2Freact-17.0.1.tgz#6e0600416bd57574e3f86d92edba3d9008726127"
   integrity sha1-bgYAQWvVdXTj+G2S7bo9kAhyYSc=
@@ -19745,7 +19682,7 @@ strtok3@^6.0.3:
     "@types/debug" "^4.1.5"
     peek-readable "^3.1.3"
 
-style-loader@2.0.0:
+style-loader@2.0.0, style-loader@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npm.taobao.org/style-loader/download/style-loader-2.0.0.tgz#9669602fd4690740eaaec137799a03addbbc393c"
   integrity sha1-lmlgL9RpB0DqrsE3eZoDrdu8OTw=
@@ -20590,25 +20527,6 @@ tslint@^5.9.1:
     tslib "^1.8.0"
     tsutils "^2.29.0"
 
-tslint@^6.1.2:
-  version "6.1.2"
-  resolved "https://registry.yarnpkg.com/tslint/-/tslint-6.1.2.tgz#2433c248512cc5a7b2ab88ad44a6b1b34c6911cf"
-  integrity sha512-UyNrLdK3E0fQG/xWNqAFAC5ugtFyPO4JJR1KyyfQAyzR8W0fTRrC91A8Wej4BntFzcvETdCSDa/4PnNYJQLYiA==
-  dependencies:
-    "@babel/code-frame" "^7.0.0"
-    builtin-modules "^1.1.1"
-    chalk "^2.3.0"
-    commander "^2.12.1"
-    diff "^4.0.1"
-    glob "^7.1.1"
-    js-yaml "^3.13.1"
-    minimatch "^3.0.4"
-    mkdirp "^0.5.3"
-    resolve "^1.3.2"
-    semver "^5.3.0"
-    tslib "^1.10.0"
-    tsutils "^2.29.0"
-
 tslint@^6.1.3:
   version "6.1.3"
   resolved "https://registry.npm.taobao.org/tslint/download/tslint-6.1.3.tgz?cache=0&sync_timestamp=1600702437217&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ftslint%2Fdownload%2Ftslint-6.1.3.tgz#5c23b2eccc32487d5523bd3a470e9aa31789d904"
@@ -21174,11 +21092,6 @@ use-sidecar@^1.0.1:
     detect-node "^2.0.4"
     tslib "^1.9.3"
 
-use-url-search-params@^2.3.13:
-  version "2.3.13"
-  resolved "https://registry.npm.taobao.org/use-url-search-params/download/use-url-search-params-2.3.13.tgz#016009c8879fc7f631a58cdea572c5ded821bf35"
-  integrity sha1-AWAJyIefx/YxpYzepXLF3tghvzU=
-
 use@^3.1.0:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/use/-/use-3.1.1.tgz#d50c8cac79a19fbc20f2911f56eb973f4e10070f"
@@ -21230,11 +21143,6 @@ utils-merge@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
   integrity sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=
-
-uuid-random@^1.3.2:
-  version "1.3.2"
-  resolved "https://registry.npm.taobao.org/uuid-random/download/uuid-random-1.3.2.tgz#96715edbaef4e84b1dcf5024b00d16f30220e2d0"
-  integrity sha1-lnFe26706Esdz1AksA0W8wIg4tA=
 
 uuid@^3.0.1, uuid@^3.1.0, uuid@^3.3.2, uuid@^3.3.3, uuid@^3.4.0:
   version "3.4.0"
@@ -21640,13 +21548,6 @@ webpack-theme-color-replacer@^1.3.14:
   version "1.3.14"
   resolved "https://registry.npm.taobao.org/webpack-theme-color-replacer/download/webpack-theme-color-replacer-1.3.14.tgz#2bdc9b29e708aa90ca56afce64955692c5050b8b"
   integrity sha1-K9ybKecIqpDKVq/OZJVWksUFC4s=
-  dependencies:
-    webpack-sources "*"
-
-webpack-theme-color-replacer@^1.3.15:
-  version "1.3.15"
-  resolved "https://registry.npm.taobao.org/webpack-theme-color-replacer/download/webpack-theme-color-replacer-1.3.15.tgz#c7a99a33b1cde729524c0e8f0544e7fff015726e"
-  integrity sha1-x6maM7HN5ylSTA6PBUTn//AVcm4=
   dependencies:
     webpack-sources "*"
 

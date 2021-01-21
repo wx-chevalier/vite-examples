@@ -1,3 +1,31 @@
+declare module 'dayjs/locale/zh-cn';
+declare module 'dayjs/locale/en';
+declare module 'rc-tween-one/lib/plugin/ChildrenPlugin';
+declare module 'dayjs-ext/plugin/timeZone';
+declare module 'react-hls-player';
+declare module 'ant-design-pro/lib/Ellipsis';
+declare module 'slash2';
+declare module 'antd-theme-webpack-plugin';
+
+declare module '*.css';
+declare module '*.scss';
+declare module '*.sass';
+declare module '*.svg';
+declare module '*.png';
+declare module '*.jpg';
+declare module '*.jpeg';
+declare module '*.gif';
+declare module '*.bmp';
+declare module '*.tiff';
+declare module 'omit.js';
+declare module 'react-copy-to-clipboard';
+declare module 'react-fittext';
+declare module '@antv/data-set';
+declare module 'nzh/cn';
+declare module 'webpack-theme-color-replacer';
+declare module 'webpack-theme-color-replacer/client';
+declare module 'redux-pack';
+
 declare module '*.less' {
   const styles: Record<string, string>;
   export = styles;
@@ -8,8 +36,6 @@ declare module '*.svg' {
   const Component: React.ComponentType;
   export = styles;
 }
-
-declare module '@antv/data-set';
 
 declare module 'html-webpack-harddisk-plugin' {
   import { Plugin } from 'webpack';
@@ -92,9 +118,13 @@ declare module 'webpack-theme-color-replacer/client' {
   export = client;
 }
 
-declare module 'dayjs/locale/zh-cn';
-declare module 'dayjs/locale/en';
-declare module 'rc-tween-one/lib/plugin/ChildrenPlugin';
-declare module 'dayjs-ext/plugin/timeZone';
-declare module 'react-hls-player';
-declare module 'ant-design-pro/lib/Ellipsis';
+declare module 'html-webpack-plugin' {
+  namespace HtmlWebpackPlugin {
+    interface Options {
+      alwaysWriteToDisk?: boolean;
+      inlineSource?: string | RegExp;
+    }
+  }
+
+  export = HtmlWebpackPlugin;
+}

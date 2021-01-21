@@ -43,7 +43,7 @@
     "yargs": "^15.3.1"
   },
   "devDependencies": {
-    "@m-fe/app-config": "^0.7.18",
+    "@m-fe/app-config": "^0.7.20",
     "@types/inquirer": "^6.5.0",
     "cross-env": "^7.0.2",
     "webpack": "^4.43.0"

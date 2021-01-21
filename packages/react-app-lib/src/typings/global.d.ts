@@ -19,14 +19,3 @@ declare global {
     };
   }
 }
-
-declare module 'html-webpack-plugin' {
-  namespace HtmlWebpackPlugin {
-    interface Options {
-      alwaysWriteToDisk?: boolean;
-      inlineSource?: string | RegExp;
-    }
-  }
-
-  export = HtmlWebpackPlugin;
-}
