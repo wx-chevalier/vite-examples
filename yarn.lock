@@ -2494,10 +2494,10 @@
     prettier-plugin-sh "^0.3.0"
     prettier-plugin-toml "^0.3.1"
 
-"@m-fe/react-commons@^0.0.11":
-  version "0.0.11"
-  resolved "https://registry.npmjs.org/@m-fe/react-commons/-/react-commons-0.0.11.tgz#1a3da5e5f55892d2457aa2374cb8d5a6a2855bb7"
-  integrity sha512-9nJRu6aw9nqBVzXyb0c9Xxfu0vDL8guwQ87V5AgRKMf3bCD5wx70K3qnIoZh4e4ct8h0XeUfUvAPorzjPujZ+w==
+"@m-fe/react-commons@^0.0.16":
+  version "0.0.16"
+  resolved "https://registry.npm.taobao.org/@m-fe/react-commons/download/@m-fe/react-commons-0.0.16.tgz?cache=0&sync_timestamp=1611300727274&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40m-fe%2Freact-commons%2Fdownload%2F%40m-fe%2Freact-commons-0.0.16.tgz#cf55da0c13eafb6d96e378b06171ee34227302ad"
+  integrity sha1-z1XaDBPq+22W43iwYXHuNCJzAq0=
 
 "@m-fe/remark-config@^0.0.1":
   version "0.0.1"

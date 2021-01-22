@@ -3,7 +3,7 @@ import { Avatar, List } from 'antd';
 import classNames from 'classnames';
 import * as React from 'react';
 
-import styles from './NoticeList.less';
+import styles from './index.less';
 
 export const NoticeList: React.SFC<NoticeIconTabProps> = ({
   data = [],
