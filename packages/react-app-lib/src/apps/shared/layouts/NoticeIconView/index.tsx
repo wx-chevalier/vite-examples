@@ -1,11 +1,13 @@
+import { CurrentUser, NoticeItem } from '@m-fe/react-commons';
+import NoticeIcon from '@m-fe/react-commons/dist/types/components/NoticeIcon';
 import { message, Tag } from 'antd';
 import groupBy from 'lodash/groupBy';
 import moment from 'moment';
 import React, { Component } from 'react';
 
-import { CurrentUser, formatMessage, NoticeItem } from '@/skeleton';
+import { formatMessage } from '@/skeleton';
 
-import NoticeIcon from '../NoticeIcon';
+import { NoticeList } from '../NoticeList';
 import styles from './index.less';
 
 export interface NoticeIconViewProps {
@@ -90,11 +92,9 @@ export class NoticeIconView extends Component<NoticeIconViewProps> {
 
     return (
       <NoticeIcon
+        NoticeList={NoticeList}
         className={styles.action}
         count={currentUser && currentUser.unreadCount}
-        onItemClick={item => {
-          this.changeReadState(item as NoticeItem);
-        }}
         loading={fetchingNotices}
         clearText={formatMessage({
           id: 'component.noticeIcon.clear',
@@ -104,12 +104,15 @@ export class NoticeIconView extends Component<NoticeIconViewProps> {
           id: 'component.noticeIcon.view-more',
           defaultMessage: '更多',
         })}
+        clearClose={true}
         onClear={this.handleNoticeClear}
         onPopupVisibleChange={onNoticeVisibleChange}
         onViewMore={() => message.info('Click on view more')}
-        clearClose={true}
+        onItemClick={item => {
+          this.changeReadState(item as NoticeItem);
+        }}
       >
-        <NoticeIcon.Tab
+        <NoticeList
           tabKey="notification"
           count={unreadMsg.notification}
           list={noticeData.notification}
@@ -123,7 +126,7 @@ export class NoticeIconView extends Component<NoticeIconViewProps> {
           })}
           showViewMore={true}
         />
-        <NoticeIcon.Tab
+        <NoticeList
           tabKey="message"
           count={unreadMsg.message}
           list={noticeData.message}
@@ -137,7 +140,7 @@ export class NoticeIconView extends Component<NoticeIconViewProps> {
           })}
           showViewMore={true}
         />
-        <NoticeIcon.Tab
+        <NoticeList
           tabKey="event"
           title={formatMessage({
             id: 'component.globalHeader.event',

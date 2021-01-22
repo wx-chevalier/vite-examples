@@ -1,12 +1,11 @@
 import { LogoutOutlined } from '@ant-design/icons';
+import { CurrentUser, HeaderDropdown } from '@m-fe/react-commons';
 import { Avatar, Menu, Spin } from 'antd';
 import * as React from 'react';
 import { FormattedMessage } from 'react-intl';
 
 import { logout } from '@/apis';
-import { CurrentUser } from '@/skeleton';
 
-import HeaderDropdown from '../HeaderDropdown';
 import styles from './index.less';
 
 export interface GlobalHeaderRightProps {

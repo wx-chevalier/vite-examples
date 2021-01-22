@@ -18,7 +18,7 @@ import { getMenus } from '@/manifest';
 import { formatMessage, history } from '@/skeleton';
 
 import { ColoredLabel } from '../../components/Label';
-import { RightContent } from '../GlobalHeader/RightContent';
+import { RightContent } from '../RightContent';
 import styles from './index.less';
 import { NavContext } from './NavContext';
 
@@ -109,6 +109,19 @@ export const NavLayout: React.FC<NavLayoutProps> = props => {
     );
   };
 
+  const routes = getMenus();
+  // 收缩状态下，必须具备二级菜单
+  const collapsedRoutes = [...routes].map(r => {
+    if (!r.children) {
+      return {
+        ...r,
+        children: [{ ...r, icon: undefined }],
+      };
+    }
+
+    return r;
+  });
+
   return (
     <NavContext.Provider
       value={{
@@ -131,7 +144,7 @@ export const NavLayout: React.FC<NavLayoutProps> = props => {
         }
         route={{
           name: 'Root',
-          routes: getMenus(),
+          routes: isCollapsed ? collapsedRoutes : routes,
         }}
         title="React App Lib"
         siderWidth={200}
@@ -177,6 +190,7 @@ export const NavLayout: React.FC<NavLayoutProps> = props => {
             </span>
           );
         }}
+        openAnimation={() => {}}
         collapsedButtonRender={false}
         footerRender={footerRender}
         formatMessage={formatMessage}

@@ -1,15 +1,15 @@
 import { QuestionCircleOutlined } from '@ant-design/icons';
+import { LangSelector } from '@m-fe/react-commons';
 import { Tooltip } from 'antd';
 import * as React from 'react';
 
 import { getGlobalUser } from '@/apis';
-import { formatMessage } from '@/skeleton';
+import { formatMessage, getLocale, setLocale } from '@/skeleton';
 
-import HeaderSearch from '../HeaderSearch';
-import SelectLang from '../LangSelector';
+import { HeaderSearch } from '../HeaderSearch';
+import { NoticeIconView } from '../NoticeIconView';
+import { UserDropdown } from '../UserDropdown';
 import styles from './index.less';
-import { NoticeIconView } from './NoticeIconView';
-import { UserDropdown as User } from './UserDropdown';
 
 export type SiderTheme = 'light' | 'dark';
 export interface RightContentProps {
@@ -65,13 +65,17 @@ export const RightContent: React.SFC<RightContentProps> = props => {
         </a>
       </Tooltip>
       <NoticeIconView />
-      <User
+      <UserDropdown
         currentUser={{
           name: getGlobalUser().nickname,
           avatar: 'https://i.pravatar.cc/300',
         }}
       />
-      <SelectLang className={styles.action} />
+      <LangSelector
+        className={styles.action}
+        selectedLang={getLocale()}
+        onLangSelect={key => setLocale(key, false)}
+      />
     </div>
   );
 };
