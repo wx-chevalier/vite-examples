@@ -1,5 +1,5 @@
 import { CurrentUser, NoticeItem } from '@m-fe/react-commons';
-import NoticeIcon from '@m-fe/react-commons/dist/types/components/NoticeIcon';
+import { NoticeIcon } from '@m-fe/react-commons';
 import { message, Tag } from 'antd';
 import groupBy from 'lodash/groupBy';
 import moment from 'moment';
