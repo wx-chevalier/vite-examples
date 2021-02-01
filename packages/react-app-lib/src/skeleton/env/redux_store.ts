@@ -13,7 +13,7 @@ export function configAppStore(preloadedState: Record<string, unknown> = {}) {
     reducer: rootReducer,
     middleware: [
       routerMiddleware(history),
-      ...getDefaultMiddleware(),
+      ...getDefaultMiddleware({ serializableCheck: false }),
       reduxPackMiddleware,
     ],
     preloadedState,
