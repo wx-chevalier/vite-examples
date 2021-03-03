@@ -37,7 +37,14 @@ export const getMenus: () => MenuDataItem[] = () => {
       name: '用户管理',
       icon: <UserOutlined style={iconStyle} />,
       children: [
-        { path: `/user/list`, name: '用户列表' },
+        {
+          path: `/user/list`,
+          name: '用户列表',
+          children: [
+            { path: `/user/list`, name: '用户列表' },
+            { path: `/user/role`, name: '角色管理' },
+          ],
+        },
         { path: `/user/role`, name: '角色管理' },
       ],
     },
