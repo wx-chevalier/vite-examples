@@ -4,6 +4,7 @@ import styles from './index.less';
 
 function Rectangle(props) {
   const data = props.data[0];
+
   return (
     <div className={styles.pbbContainer}>
       {data.itemMap.map(val => {
