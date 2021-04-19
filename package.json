@@ -10,10 +10,7 @@
   "license": "MIT",
   "private": true,
   "workspaces": [
-    "packages/html-lib",
-    "packages/react-app-lib",
-    "packages/react-comp-lib",
-    "packages/ts-cli-lib"
+    "packages/*"
   ],
   "keywords": [
     "react",
