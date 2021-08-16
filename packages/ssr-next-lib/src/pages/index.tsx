@@ -63,7 +63,10 @@ export default function Home({
         </a>
       </footer>
 
-      <div dangerouslySetInnerHTML={{ __html: htmlSnapshot }} />
+      <div
+        style={{ display: 'none' }}
+        dangerouslySetInnerHTML={{ __html: htmlSnapshot }}
+      />
     </div>
   );
 }
