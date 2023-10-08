@@ -1,5 +1,4 @@
 import { ButtonHTMLAttributes } from 'react'
-import styles from './index.module.less'
 
 export const AT_BUTTON_VARIANT = {
   PRIMARY: 'primary',
@@ -23,7 +22,7 @@ export interface AtButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 export const AtButton = ({ label, variant = 'PRIMARY', isDisabled = false, onClick }: AtButtonProps) => {
   return (
     <button
-      className={`${styles.container} transition-colors px-6 py-2 rounded-md ${variantClasses[variant]} ${
+      className={`transition-colors px-6 py-2 rounded-md ${variantClasses[variant]} ${
         isDisabled ? 'bg-gray-300 text-slate-600 cursor-not-allowed pointer-events-none' : ''
       }`}
       onClick={isDisabled ? onClick : undefined}
